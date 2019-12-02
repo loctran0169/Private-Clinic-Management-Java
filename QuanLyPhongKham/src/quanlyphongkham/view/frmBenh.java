@@ -23,7 +23,14 @@ public class frmBenh extends javax.swing.JFrame {
     Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
-
+    
+//    String url = "jdbc:mysql://localhost:3306/qlpk";
+//    String userName = "root";
+//    String passWord = "angel1999";
+    
+    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
+    String userName = "loctran0169";
+    String passWord = "angel1999";
     public frmBenh() {
         initComponents();
         loadTable();
@@ -165,9 +172,9 @@ public class frmBenh extends javax.swing.JFrame {
     
     private void btn_themActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_themActionPerformed
         try {
-            String query = "INSERT INTO BENH (malb,tenloaibenh,trieuchung) VALUES (?,?,?)";
+            String query = "INSERT INTO benh (malb,tenloaibenh,trieuchung) VALUES (?,?,?)";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlpk", "root", "angel1999");
+            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
             pst.setString(1, txt_mabn.getText());
             pst.setString(2, txt_loaibenh.getText());
@@ -182,9 +189,9 @@ public class frmBenh extends javax.swing.JFrame {
 
     private void btn_xoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xoaActionPerformed
         try {
-            String query = "DELETE FROM BENH WHERE MaLB=?";
+            String query = "DELETE FROM benh WHERE MaLB=?";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlpk", "root", "angel1999");
+            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
             pst.setString(1, txt_mabn.getText());
             pst.executeUpdate();
@@ -197,9 +204,9 @@ public class frmBenh extends javax.swing.JFrame {
 
     private void btn_suaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_suaActionPerformed
         try {
-            String query = "UPDATE BENH SET malb =?, tenloaibenh = ?, trieuchung = ? WHERE malb =?";
+            String query = "UPDATE benh SET malb =?, tenloaibenh = ?, trieuchung = ? WHERE malb =?";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlpk", "root", "angel1999");
+            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
             pst.setString(1, txt_mabn.getText());
             pst.setString(2, txt_loaibenh.getText());
@@ -226,8 +233,8 @@ public class frmBenh extends javax.swing.JFrame {
     }//GEN-LAST:event_table_benhMouseClicked
     private void loadTable() {
         try {
-            String sql = "SELECT * FROM BENH";
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlpk", "root", "angel1999");
+            String sql = "SELECT * FROM benh";
+            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             table_benh.setModel(DbUtils.resultSetToTableModel(rs));
