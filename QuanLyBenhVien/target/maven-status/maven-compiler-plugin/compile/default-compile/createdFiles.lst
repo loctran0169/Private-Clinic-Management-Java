@@ -1,0 +1,4 @@
+com\mycompany\main\frmGui.class
+com\mycompany\dto\BenhNhanDTO.class
+com\mycompany\view\frmBenhNhan.class
+com\mycompany\view\frmBenh.class
