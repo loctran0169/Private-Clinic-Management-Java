@@ -125,6 +125,9 @@
           <Dimension value="[80, 30]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_suaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_xoa">
       <Properties>
@@ -133,6 +136,9 @@
           <Dimension value="[80, 30]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_xoaActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -173,6 +179,9 @@
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="table_benhMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

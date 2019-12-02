@@ -5,11 +5,14 @@
  */
 package quanlyphongkham.view;
 
+import java.awt.event.MouseListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
+import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -23,6 +26,8 @@ public class frmBenh extends javax.swing.JFrame {
 
     public frmBenh() {
         initComponents();
+        loadTable();
+        table_benh.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
     }
 //    public Connection getConnect(){
 //        Conne
@@ -60,9 +65,19 @@ public class frmBenh extends javax.swing.JFrame {
 
         btn_sua.setText("Sửa");
         btn_sua.setPreferredSize(new java.awt.Dimension(80, 30));
+        btn_sua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_suaActionPerformed(evt);
+            }
+        });
 
         btn_xoa.setText("Xóa");
         btn_xoa.setPreferredSize(new java.awt.Dimension(80, 30));
+        btn_xoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_xoaActionPerformed(evt);
+            }
+        });
 
         table_benh.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -75,6 +90,11 @@ public class frmBenh extends javax.swing.JFrame {
                 "Mã Loại Bệnh", "Tên Loại Bệnh", "Triệu Chứng"
             }
         ));
+        table_benh.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table_benhMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(table_benh);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -133,11 +153,21 @@ public class frmBenh extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void MoKhoaButton() {
+        txt_loaibenh.setEnabled(true);
+        txt_trieuchung.setEnabled(true);
+        btn_them.setVisible(false);
+        btn_sua.setVisible(false);
+        btn_xoa.setVisible(false);
+//        btnLuu.Visible = true;
+//        btnHuy.Visible = true;
+    }
+    
     private void btn_themActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_themActionPerformed
         try {
             String query = "INSERT INTO BENH (malb,tenloaibenh,trieuchung) VALUES (?,?,?)";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlpk","root","angel1999");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlpk", "root", "angel1999");
             pst = conn.prepareStatement(query);
             pst.setString(1, txt_mabn.getText());
             pst.setString(2, txt_loaibenh.getText());
@@ -147,8 +177,64 @@ public class frmBenh extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
+        loadTable();
     }//GEN-LAST:event_btn_themActionPerformed
 
+    private void btn_xoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xoaActionPerformed
+        try {
+            String query = "DELETE FROM BENH WHERE MaLB=?";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlpk", "root", "angel1999");
+            pst = conn.prepareStatement(query);
+            pst.setString(1, txt_mabn.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Đã Xóa");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+        loadTable();
+    }//GEN-LAST:event_btn_xoaActionPerformed
+
+    private void btn_suaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_suaActionPerformed
+        try {
+            String query = "UPDATE BENH SET malb =?, tenloaibenh = ?, trieuchung = ? WHERE malb =?";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlpk", "root", "angel1999");
+            pst = conn.prepareStatement(query);
+            pst.setString(1, txt_mabn.getText());
+            pst.setString(2, txt_loaibenh.getText());
+            pst.setString(3, txt_trieuchung.getText());
+            pst.setString(4, txt_mabn.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Đã Sữa");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        loadTable();
+    }//GEN-LAST:event_btn_suaActionPerformed
+
+    private void table_benhMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_benhMouseClicked
+        try{
+            int index = table_benh.getSelectedRow();
+            txt_mabn.setText((String) table_benh.getValueAt(index, 0));
+            txt_loaibenh.setText((String) table_benh.getValueAt(index, 1));
+            txt_trieuchung.setText((String) table_benh.getValueAt(index, 2));
+        }
+        catch(Exception ex){
+            
+        }
+    }//GEN-LAST:event_table_benhMouseClicked
+    private void loadTable() {
+        try {
+            String sql = "SELECT * FROM BENH";
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlpk", "root", "angel1999");
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+            table_benh.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_sua;
     private javax.swing.JButton btn_them;
