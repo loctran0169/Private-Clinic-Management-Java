@@ -34,6 +34,9 @@ public class LoaiBenhDTO {
     public void setTrieuChung(String trieuChung) {
         this.trieuChung = trieuChung;
     }
+
+    public LoaiBenhDTO() {
+    }
     private String MaLB;
     private String tenLoaiBenh;
     private String trieuChung;
