@@ -157,7 +157,9 @@ public class frmBenh extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public static void main(String[] args) {
+        new frmBenh().setVisible(true);
+    }
     private void MoKhoaButton() {
         txt_loaibenh.setEnabled(true);
         txt_trieuchung.setEnabled(true);
