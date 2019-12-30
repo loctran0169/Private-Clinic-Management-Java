@@ -8,6 +8,19 @@ import java.util.Date;
  */
 public class PhieuKhamDTO {
 
+    public PhieuKhamDTO() {
+    }
+
+    public PhieuKhamDTO(String MaPK, String MaBN, String MaNV, String MaLB, Date NgayKham, Date NgayKhamLai) {
+        this.MaPK = MaPK;
+        this.MaBN = MaBN;
+        this.MaNV = MaNV;
+        this.MaLB = MaLB;
+        this.NgayKham = NgayKham;
+        this.NgayKhamLai = NgayKhamLai;
+    }
+
+    
     public String getMaPK() {
         return MaPK;
     }

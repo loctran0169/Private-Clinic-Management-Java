@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import quanlyphongkham.dal.LapDonThuocDAL;
 import quanlyphongkham.dto.CachDungDTO;
 import quanlyphongkham.dto.LapDonThuocDTO;
+import quanlyphongkham.dto.PhieuKhamDTO;
 import quanlyphongkham.dto.ThuocDTO;
 
 /**
@@ -22,7 +23,7 @@ public class LapDonThuocBUS {
     public LapDonThuocBUS() {
         dal=new LapDonThuocDAL();
     }
-    public ArrayList<String> loadPhieuKham()
+    public ArrayList<LapDonThuocDTO> loadPhieuKham()
     {
         return dal.loadPhieuKham();
     }

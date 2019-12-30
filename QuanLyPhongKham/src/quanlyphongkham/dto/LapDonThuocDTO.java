@@ -24,6 +24,28 @@ public class LapDonThuocDTO {
         private int SoLuong;
         private String MaDV;
 
+    public LapDonThuocDTO(String MaPK, String MaThuoc) {
+        this.MaPK = MaPK;
+        this.MaThuoc = MaThuoc;
+    }
+    
+    public LapDonThuocDTO(String MaPK, String MaBN, String TenBN, String MaLB, String TenLB, String TrieuChung) {
+        this.MaPK = MaPK;
+        this.MaBN = MaBN;
+        this.TenBN = TenBN;
+        this.MaLB = MaLB;
+        this.TenLB = TenLB;
+        this.TrieuChung = TrieuChung;
+    }
+
+    public LapDonThuocDTO(String MaPK, String MaThuoc, int SoLuong, String MaDV) {
+        this.MaPK = MaPK;
+        this.MaThuoc = MaThuoc;
+        this.SoLuong = SoLuong;
+        this.MaDV = MaDV;
+    }
+    
+
     public String getMaPK() {
         return MaPK;
     }

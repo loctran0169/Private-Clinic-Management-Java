@@ -17,16 +17,14 @@ import quanlyphongkham.dto.CachDungDTO;
  *
  * @author ADMIN
  */
-public class CachDungDAL {
-    Connection conn = null;
+public class CachDungDAL extends ConnectDB{
+  
     PreparedStatement pst = null;
     ResultSet rs = null;
 //    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
 //    String userName = "loctran0169";
 //    String passWord = "angel1999";
-    String url = "jdbc:mysql://127.0.0.1:3306/qlpk";
-    String userName = "root";
-    String passWord = "ntrongkhanh";
+    
     public CachDungDAL() {       
     }
     public boolean them(CachDungDTO dto)
@@ -34,7 +32,7 @@ public class CachDungDAL {
         try {
             String query = "INSERT INTO CACHDUNG (macd,cachdung) VALUES (?,?)";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(url, userName, passWord);
+           
             pst = conn.prepareStatement(query);
             pst.setString(1, dto.getMaCD());
             pst.setString(2, dto.getCachDung());

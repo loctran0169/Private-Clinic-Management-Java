@@ -126,6 +126,13 @@ public class CachDungThuoc extends javax.swing.JFrame {
             return ma = "CD" + coso;
         
     }
+    private boolean checkNULL()
+    {
+        if (txt_CachDung.getText().toString().equals("") || txt_MaCachDung.getText().toString().equals("")) {
+            return true;
+        }
+        return false;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -249,7 +256,7 @@ public class CachDungThuoc extends javax.swing.JFrame {
         int dialogButton = JOptionPane.YES_NO_OPTION;
         int dialogResult = JOptionPane.showConfirmDialog (null, "Bạn có chắc chắn muốn xóa","Cảnh báo",dialogButton);
         if(dialogResult == JOptionPane.YES_OPTION){
-             CachDungDTO cachDungDTO=new CachDungDTO(txt_MaCachDung.getText().toString(), txt_CachDung.getText().toString());
+            CachDungDTO cachDungDTO=new CachDungDTO(txt_MaCachDung.getText().toString(), txt_CachDung.getText().toString());
             cachDungBUS.xoa(cachDungDTO);
             // Saving code here
             loadTable();
@@ -270,6 +277,10 @@ public class CachDungThuoc extends javax.swing.JFrame {
         //1 thêm
         //2 xóa
         //3 sửa
+        if (checkNULL()) {
+            JOptionPane.showMessageDialog(null, "Mời bạn nhập đầy đủ thông tin");
+            return;
+        }
         CachDungDTO cachDungDTO=new CachDungDTO(txt_MaCachDung.getText().toString(), txt_CachDung.getText().toString());
         if (flag==1) {
             cachDungBUS.them(cachDungDTO);

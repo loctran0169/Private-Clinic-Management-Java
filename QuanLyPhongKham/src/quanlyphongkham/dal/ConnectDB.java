@@ -16,9 +16,9 @@ import javax.swing.JOptionPane;
  */
 public class ConnectDB {
 
-    String url = "jdbc:mysql://localhost:3306/qlpk";
+    String url = "jdbc:mysql://127.0.0.1:3306/qlpk";
     String userName = "root";
-    String passWord = "angel1999";
+    String passWord = "ntrongkhanh";
 
     public Connection conn = null;
 

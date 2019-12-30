@@ -14,14 +14,15 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import quanlyphongkham.dto.CachDungDTO;
 import quanlyphongkham.dto.LapDonThuocDTO;
+import quanlyphongkham.dto.PhieuKhamDTO;
 import quanlyphongkham.dto.ThuocDTO;
 
 /**
  *
  * @author ADMIN
  */
-public class LapDonThuocDAL {
-    Connection conn = null;
+public class LapDonThuocDAL extends ConnectDB{
+   
     PreparedStatement pst = null;
     ResultSet rs = null;
 //    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
@@ -32,24 +33,25 @@ public class LapDonThuocDAL {
     String passWord = "ntrongkhanh";
     public LapDonThuocDAL() {
     }
-    public ArrayList<String> loadPhieuKham() {
-        ArrayList<String> list=new ArrayList<>();
+    public ArrayList<LapDonThuocDTO> loadPhieuKham() {
+        ArrayList<LapDonThuocDTO> list=new ArrayList<>();
         
         try {
-            String sql = "SELECT MAPK FROM PHIEUKHAM";
-            conn = DriverManager.getConnection(url, userName, passWord);
+            String sql = "SELECT * \n" +
+                    "FROM phieukham,benhnhan,benh\n" +
+                    "where phieukham.MaBN=benhnhan.MaBN and benh.MaLB=phieukham.MaLB";
+          
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
-            do {
-                String ma = rs.getString(1); // get by position
-                list.add(ma);
-            } while( rs.next() );
+             while( rs.next() ) {
+                LapDonThuocDTO pkdto=new LapDonThuocDTO(rs.getString(1), rs.getString(2), rs.getString(7), rs.getString(4), rs.getString(13), rs.getString(14));
+               list.add(pkdto);
+            };
             return list;
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex);
             return null;
         }
-        
     }
     public ArrayList<ThuocDTO>  loadThuoc()
     {
@@ -59,10 +61,11 @@ public class LapDonThuocDAL {
             conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
-            do {
-                ThuocDTO dTO=new ThuocDTO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getDate(4),rs.getDate(5),rs.getInt(6),rs.getInt(7));
+            while( rs.next() ) {
+                ThuocDTO dTO=new ThuocDTO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getInt(6));
+               
                 list.add(dTO);
-            } while( rs.next() );
+            } ;
             return list;
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex);
@@ -77,10 +80,10 @@ public class LapDonThuocDAL {
             conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
-            do {
+            while( rs.next() ) {
                 CachDungDTO dTO=new CachDungDTO(rs.getString(1),rs.getString(2));
                 list.add(dTO);
-            } while( rs.next() );
+            } ;
             return list;
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex);
@@ -131,7 +134,7 @@ public class LapDonThuocDAL {
         try {
             String query = "delete from DONTHUOC where mathuoc=? and mapk=?";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(url, userName, passWord);
+           
             pst = conn.prepareStatement(query);
             
             
@@ -148,7 +151,8 @@ public class LapDonThuocDAL {
     }
     public ResultSet loadTable(String s) {
         try {
-            String query = "SELECT BN.HOTEN,TrieuChung,TenLoaiBenh,DT.MaThuoc,TenThuoc,SoLuong,TenDonVi,DonGia,DT.MACD,CachDung ";
+            String query = "SELECT DT.MaThuoc as \"Mã thuốc\",TenThuoc as \"Tên thuốc\",SoLuong as \"Số lượng\",TenDonVi as \"Tên đơn vị\","
+                    + "DonGia as \"Đơn giá\",DT.MACD as \"Mã cách dùng\",CachDung  as \"Cách dùng\"";
             query += "FROM DONTHUOC DT ";
             query += "RIGHT JOIN PHIEUKHAM PK ON DT.MAPK=PK.MAPK ";
             query += "LEFT JOIN CACHDUNG CD ON DT.MACD=CD.MACD ";

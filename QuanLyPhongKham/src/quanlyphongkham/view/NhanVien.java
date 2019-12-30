@@ -141,6 +141,18 @@ public class NhanVien extends javax.swing.JFrame {
             return ma = "NV" + coso;
         
     }
+    private boolean checkNULL()
+    {
+        if (txt_manv.getText().toString().equals("") ||
+                txt_chucvu.getText().toString().equals("") ||
+                txt_diachi.getText().toString().equals("") ||
+                txt_hoten.getText().toString().equals("") ||
+                txt_sdt.getText().toString().equals("") ||
+                datePicker.getDate() ==null) {
+            return true;
+        }
+        return false;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -305,6 +317,10 @@ public class NhanVien extends javax.swing.JFrame {
         //1 thêm
         //2 xóa
         //3 sửa
+        if (checkNULL()) {
+            JOptionPane.showMessageDialog(null, "Mời bạn nhập đầy đủ thông tin");
+            return;
+        }
         String gt ="";
         if (radio_nam.isSelected()==true) {
             gt="Nam";
@@ -313,15 +329,15 @@ public class NhanVien extends javax.swing.JFrame {
             gt="Nữ";
             
         }
-         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            String date=sdf.format(datePicker.getDate());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String date=sdf.format(datePicker.getDate());
         NhanVienDTO nhanVienDTO=new NhanVienDTO(txt_manv.getText().toString(), txt_hoten.getText().toString(),
                 date,gt,txt_sdt.getText().toString(),
                 txt_diachi.getText().toString(),txt_chucvu.getText().toString()
         );
         if (flag==1) {
             nhanVienBUS.them(nhanVienDTO);
-           
+            
             
             
         }
@@ -352,7 +368,7 @@ public class NhanVien extends javax.swing.JFrame {
         int dialogResult = JOptionPane.showConfirmDialog (null, "Bạn có chắc chắn muốn xóa","Cảnh báo",dialogButton);
         if(dialogResult == JOptionPane.YES_OPTION){
             
-           
+            
             NhanVienDTO nhanVienDTO=new NhanVienDTO(txt_manv.getText().toString(), txt_hoten.getText().toString(),
                     null,"",txt_sdt.getText().toString(),
                     txt_diachi.getText().toString(),txt_chucvu.getText().toString());
@@ -367,7 +383,7 @@ public class NhanVien extends javax.swing.JFrame {
         enableTXT();
         setVisibleBtnLuu();
     }//GEN-LAST:event_btn_suaActionPerformed
-
+    
     private void table_nhanvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_nhanvienMouseClicked
         // TODO add your handling code here:
         try{
@@ -376,16 +392,16 @@ public class NhanVien extends javax.swing.JFrame {
             txt_hoten.setText((String) table_nhanvien.getValueAt(index, 1).toString());
             Date date = null;
             try {
-                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                 
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                
                 //  JOptionPane.showMessageDialog(null, table_nhanvien.getValueAt(index, 3).toString());
-               date = sdf.parse(table_nhanvien.getValueAt(index, 3).toString());
-               
-               
+                date = sdf.parse(table_nhanvien.getValueAt(index, 3).toString());
+                
+                
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-             
+            
             datePicker.setDate(date);
             if (table_nhanvien.getValueAt(index, 2).toString().equals("Nam") || table_nhanvien.getValueAt(index, 2).toString().equals("nam")) {
                 radio_nam.setSelected(true);
@@ -400,7 +416,7 @@ public class NhanVien extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_table_nhanvienMouseClicked
-
+    
     private void radio_namActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radio_namActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_radio_namActionPerformed

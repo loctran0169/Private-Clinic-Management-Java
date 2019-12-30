@@ -3,35 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/bus/ThuocBUS.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/NhanVienDAL.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/ThuocDTO.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/CachDungDAL.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/bus/NhanVienBUS.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/bus/HoaDonBUS.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/frmBenhNhan.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/UserDAL.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/QuanLyPhongKham.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/LapDonThuocDTO.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/CachDungDTO.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/QuyenHanDTO.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/HoaDonDAL.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/ThongTinThuoc.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/ThuocDAL.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/NhanVien.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/frmKhoiPhuc.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/UserDTO.java</file>
+            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/PhieuKhamDAL.java</file>
             <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/CachDungThuoc.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/bus/UserBUS.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/ThamSo.java</file>
+            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/ThongTinThuoc.java</file>
+            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/NhanVien.java</file>
             <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/LapDonThuocDAL.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/LoaiBenhDTO.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/NhanVienDTO.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/frmBenh.java</file>
+            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/NguoiDung.java</file>
+            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/LapDonThuoc.java</file>
+            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/LapDonThuocDTO.java</file>
             <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/bus/LapDonThuocBUS.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/bus/CachDungBUS.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/PhieuKham.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/DonViTinhDTO.java</file>
         </group>
     </open-files>
 </project-private>

@@ -20,16 +20,14 @@ import quanlyphongkham.dto.ThuocDTO;
  *
  * @author ADMIN
  */
-public class ThuocDAL {
+public class ThuocDAL extends ConnectDB{
     Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
 //    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
 //    String userName = "loctran0169";
 //    String passWord = "angel1999";
-    String url = "jdbc:mysql://127.0.0.1:3306/qlpk";
-    String userName = "root";
-    String passWord = "ntrongkhanh";
+   
     public ThuocDAL() {
     }
     public boolean them(ThuocDTO dto)
@@ -37,7 +35,7 @@ public class ThuocDAL {
         try {
             String query = "INSERT INTO THUOC(mathuoc,tenthuoc,madv,nsx,hsd,dongia) VALUES (?,?,?,?,?,?)";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(url, userName, passWord);
+           
             pst = conn.prepareStatement(query);
             pst.setString(1, dto.getMaThuoc());
             pst.setString(2, dto.getTenThuoc());

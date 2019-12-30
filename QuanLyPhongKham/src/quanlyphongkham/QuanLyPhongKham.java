@@ -6,6 +6,8 @@
 package quanlyphongkham;
 
 import quanlyphongkham.view.CachDungThuoc;
+import quanlyphongkham.view.LapDonThuoc;
+import quanlyphongkham.view.NguoiDung;
 import quanlyphongkham.view.NhanVien;
 import quanlyphongkham.view.ThongTinThuoc;
 import quanlyphongkham.view.frmBenh;
@@ -20,7 +22,7 @@ public class QuanLyPhongKham {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new ThongTinThuoc().setVisible(true);
+        new LapDonThuoc().setVisible(true);
     }
     
 }

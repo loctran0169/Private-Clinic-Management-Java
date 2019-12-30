@@ -15,6 +15,10 @@ public class UserDTO {
     private String matKhau;
     private String maNV;
     private String maQuyenHan;
+
+    public UserDTO(String maUS) {
+        this.maUS = maUS;
+    }
     
     public String getMaUS() {
         return maUS;

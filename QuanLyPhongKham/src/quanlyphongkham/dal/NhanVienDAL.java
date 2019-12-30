@@ -21,16 +21,14 @@ import quanlyphongkham.dto.NhanVienDTO;
  *
  * @author ADMIN
  */
-public class NhanVienDAL {
-    Connection conn = null;
+public class NhanVienDAL extends ConnectDB{
+  
     PreparedStatement pst = null;
     ResultSet rs = null;
 //    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
 //    String userName = "loctran0169";
 //    String passWord = "angel1999";
-    String url = "jdbc:mysql://127.0.0.1:3306/qlpk";
-    String userName = "root";
-    String passWord = "ntrongkhanh";
+  
     public NhanVienDAL() {
     }
     public ResultSet loadTable() {
@@ -38,7 +36,7 @@ public class NhanVienDAL {
             String query = "select * from NHANVIEN";
             
             
-            conn = DriverManager.getConnection(url, userName, passWord);
+            
             pst = conn.prepareStatement(query);
             rs = pst.executeQuery();
             
