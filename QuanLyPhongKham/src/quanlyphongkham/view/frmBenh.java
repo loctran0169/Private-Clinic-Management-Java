@@ -23,14 +23,15 @@ public class frmBenh extends javax.swing.JFrame {
     Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
-    
-//    String url = "jdbc:mysql://localhost:3306/qlpk";
-//    String userName = "root";
-//    String passWord = "angel1999";
-    
-    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
-    String userName = "loctran0169";
+
+    String url = "jdbc:mysql://localhost:3306/qlpk";
+    String userName = "root";
     String passWord = "angel1999";
+
+//    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
+//    String userName = "loctran0169";
+//    String passWord = "angel1999";
+
     public frmBenh() {
         initComponents();
         loadTable();
@@ -160,6 +161,7 @@ public class frmBenh extends javax.swing.JFrame {
     public static void main(String[] args) {
         new frmBenh().setVisible(true);
     }
+
     private void MoKhoaButton() {
         txt_loaibenh.setEnabled(true);
         txt_trieuchung.setEnabled(true);
@@ -169,7 +171,7 @@ public class frmBenh extends javax.swing.JFrame {
 //        btnLuu.Visible = true;
 //        btnHuy.Visible = true;
     }
-    
+
     private void btn_themActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_themActionPerformed
         try {
             String query = "INSERT INTO benh (malb,tenloaibenh,trieuchung) VALUES (?,?,?)";
@@ -221,14 +223,13 @@ public class frmBenh extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_suaActionPerformed
 
     private void table_benhMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_benhMouseClicked
-        try{
+        try {
             int index = table_benh.getSelectedRow();
             txt_mabn.setText((String) table_benh.getValueAt(index, 0));
             txt_loaibenh.setText((String) table_benh.getValueAt(index, 1));
             txt_trieuchung.setText((String) table_benh.getValueAt(index, 2));
-        }
-        catch(Exception ex){
-            
+        } catch (Exception ex) {
+
         }
     }//GEN-LAST:event_table_benhMouseClicked
     private void loadTable() {
