@@ -6,6 +6,7 @@
 package quanlyphongkham.dto;
 
 import java.util.Date;
+import javax.swing.JTextField;
 
 /**
  *
@@ -15,22 +16,29 @@ public class ThuocDTO {
     private String MaThuoc;
     private String TenThuoc;
     private String MaDV;
-    private Date NSX;
-    private Date HSD;
+    private String NSX;
+    private String HSD;
     private int DonGia;
-    private int SoLuongTon;
+   
 
     public ThuocDTO() {
     }
 
-    public ThuocDTO(String MaThuoc, String TenThuoc, String MaDV, Date NSX, Date HSD, int DonGia, int SoLuongTon) {
+    public ThuocDTO(String MaThuoc, String TenThuoc, String MaDV, String NSX, String HSD, int DonGia) {
         this.MaThuoc = MaThuoc;
         this.TenThuoc = TenThuoc;
         this.MaDV = MaDV;
         this.NSX = NSX;
         this.HSD = HSD;
         this.DonGia = DonGia;
-        this.SoLuongTon = SoLuongTon;
+        
+    }
+    public ThuocDTO(String MaThuoc){
+        this.MaThuoc=MaThuoc;
+    }
+
+    public ThuocDTO(JTextField txt_mathuoc, Object object, Object object0, Object object1, Object object2, Object object3, Object object4) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getMaThuoc() {
@@ -57,19 +65,19 @@ public class ThuocDTO {
         this.MaDV = MaDV;
     }
 
-    public Date getNSX() {
+    public String getNSX() {
         return NSX;
     }
 
-    public void setNSX(Date NSX) {
+    public void setNSX(String NSX) {
         this.NSX = NSX;
     }
 
-    public Date getHSD() {
+    public String getHSD() {
         return HSD;
     }
 
-    public void setHSD(Date HSD) {
+    public void setHSD(String HSD) {
         this.HSD = HSD;
     }
 
@@ -81,12 +89,6 @@ public class ThuocDTO {
         this.DonGia = DonGia;
     }
 
-    public int getSoLuongTon() {
-        return SoLuongTon;
-    }
-
-    public void setSoLuongTon(int SoLuongTon) {
-        this.SoLuongTon = SoLuongTon;
-    }
+    
     
 }

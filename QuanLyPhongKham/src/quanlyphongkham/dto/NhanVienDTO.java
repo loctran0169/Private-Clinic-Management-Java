@@ -14,7 +14,7 @@ import java.util.Date;
 public class NhanVienDTO {
     private String maNhanVien;
     private String hoVaTen;
-    private Date ngaySinh;
+    private String ngaySinh;
     private String gioiTinh;
     private String sDT;
     private String diaChi;
@@ -39,11 +39,11 @@ public class NhanVienDTO {
         this.hoVaTen = hoVaTen;
     }
 
-    public Date getNgaySinh() {
+    public String getNgaySinh() {
         return ngaySinh;
     }
 
-    public void setNgaySinh(Date ngaySinh) {
+    public void setNgaySinh(String ngaySinh) {
         this.ngaySinh = ngaySinh;
     }
 
@@ -79,7 +79,7 @@ public class NhanVienDTO {
         this.chucVu = chucVu;
     }
 
-    public NhanVienDTO(String maNhanVien, String hoVaTen, Date ngaySinh, String gioiTinh, String sDT, String diaChi, String chucVu) {
+    public NhanVienDTO(String maNhanVien, String hoVaTen, String ngaySinh, String gioiTinh, String sDT, String diaChi, String chucVu) {
         this.maNhanVien = maNhanVien;
         this.hoVaTen = hoVaTen;
         this.ngaySinh = ngaySinh;

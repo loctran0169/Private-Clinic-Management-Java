@@ -36,8 +36,8 @@ public class ThuocBUS {
     public ResultSet loadTablebyKey(String s){
         return dal.loadTablebyKey(s);
     }
-    public ArrayList<DonViTinhDTO>  loadThuoc(){
-        return dal.loadTablebyKey(s);
+    public ArrayList<DonViTinhDTO>  loadDonViTinh(){
+        return dal.loadDoViTinh();
     }
     
 }

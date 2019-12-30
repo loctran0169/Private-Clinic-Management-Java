@@ -25,10 +25,12 @@ public class NhanVienDAL {
     Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
-    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
-    String userName = "loctran0169";
-    String passWord = "angel1999";
-    
+//    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
+//    String userName = "loctran0169";
+//    String passWord = "angel1999";
+    String url = "jdbc:mysql://127.0.0.1:3306/qlpk";
+    String userName = "root";
+    String passWord = "ntrongkhanh";
     public NhanVienDAL() {
     }
     public ResultSet loadTable() {
@@ -71,7 +73,7 @@ public class NhanVienDAL {
             pst.setString(1, dto.getMaNhanVien());
             pst.setString(2, dto.getHoVaTen());
             pst.setString(3, dto.getGioiTinh());
-            pst.setDate(4, (Date) dto.getNgaySinh());
+            pst.setString(4, dto.getNgaySinh());
             pst.setString(5, dto.getChucVu());
             pst.setString(6, dto.getDiaChi());
             pst.setString(7, dto.getsDT());
@@ -94,7 +96,7 @@ public class NhanVienDAL {
             pst.setString(1, dto.getMaNhanVien());
             pst.setString(2, dto.getHoVaTen());
             pst.setString(3, dto.getGioiTinh());
-            pst.setDate(4, (Date) dto.getNgaySinh());
+            pst.setString(4,  dto.getNgaySinh());
             pst.setString(5, dto.getDiaChi());
             pst.setString(6, dto.getsDT());
             pst.setString(7, dto.getChucVu());
@@ -122,6 +124,7 @@ public class NhanVienDAL {
             JOptionPane.showMessageDialog(null, e.getMessage());
             return false;
         }
+         
         return true;
     }
     

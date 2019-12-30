@@ -25,10 +25,12 @@ public class UserDAL {
      Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
-    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
-    String userName = "loctran0169";
-    String passWord = "angel1999";
-
+//    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
+//    String userName = "loctran0169";
+//    String passWord = "angel1999";
+String url = "jdbc:mysql://127.0.0.1:3306/qlpk";
+    String userName = "root";
+    String passWord = "ntrongkhanh";
     public UserDAL() {
     }
     public boolean them(UserDTO dto)
@@ -144,7 +146,7 @@ public class UserDAL {
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             do {
-                NhanVienDTO dTO=new NhanVienDTO(rs.getString(1),rs.getString(2),rs.getDate(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7));
+                NhanVienDTO dTO=new NhanVienDTO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7));
                 list.add(dTO);
             } while( rs.next() );
             return list;
