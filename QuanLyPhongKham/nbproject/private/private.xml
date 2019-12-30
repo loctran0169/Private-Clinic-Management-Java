@@ -3,14 +3,30 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/bus/HoaDonBUS.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/HoaDonDAL.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/ThongTinThuoc.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/frmBenhNhan.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/ThamSo.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/LoaiBenhDTO.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/QuanLyPhongKham.java</file>
-            <file>file:/F:/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/frmKhoiPhuc.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dto/LoaiBenhDTO.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/bus/HoaDonBUS.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/ThayDoiMatKhau.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/frmBenh.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/frmKhoiPhuc.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/image/Báo%20cáo%20sử%20dụng%20thuốc.png</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/frmBenhNhan.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/HoaDon.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/GUI.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/LapPhieuKhamDAL.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/LapDanhSachPhieuKham.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/DanhSachChoDAL.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/BaoCaoSuDungThuocTheoThang.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/LapDonThuoc.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/image/báo%20cáo%20theo%20ngày.png</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/CachDungThuoc.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/BenhNhanDAL.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/DangNhap.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/HoaDonDAL.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/dal/PhieuKhamDAL.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/BaoCaoDoanhThuTheoThang.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/image/báo%20cáo.png</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/LichSuDangNhap.java</file>
+            <file>file:/D:/Java/Private-Clinic-Management-Java/QuanLyPhongKham/src/quanlyphongkham/view/DonVi.java</file>
         </group>
     </open-files>
 </project-private>
