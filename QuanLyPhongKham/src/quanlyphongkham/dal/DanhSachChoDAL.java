@@ -17,27 +17,22 @@ import javax.swing.JOptionPane;
  *
  * @author LQTPL
  */
-public class DanhSachChoDAL {
+public class DanhSachChoDAL extends ConnectDB {
 
-    Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
-
-    String url = "jdbc:mysql://localhost:3306/qlpk";
-    String userName = "root";
-    String passWord = "angel1999";
-
     public ResultSet select(Date s) {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String query = "";
             query += "select PK.MABN,HOTEN,NGAYSINH,GIOITINH,SDT,DIACHI,NGAYKHAM ";
             query += "from PHIEUKHAM PK,  BENHNHAN BN ";
             query += "where NGAYKHAM = '" + convertUtilToSql(s).toString().trim() + "' and PK.MABN = BN.MABN and MAPK != all(SELECT MAPK FROM DONTHUOC) ";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
             rs = pst.executeQuery();
-            conn.close();
-        } catch (Exception ex) {
+        } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
             return null;
         }
