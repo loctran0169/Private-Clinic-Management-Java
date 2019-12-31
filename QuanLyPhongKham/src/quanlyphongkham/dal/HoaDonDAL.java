@@ -17,50 +17,40 @@ import quanlyphongkham.dto.HoaDonDTO;
  *
  * @author LQTPL
  */
-public class HoaDonDAL {
+public class HoaDonDAL extends ConnectDB {
 
-    Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
 
-    String url = "jdbc:mysql://localhost:3306/qlpk";
-    String userName = "root";
-    String passWord = "angel1999";
-
-    public ArrayList<HoaDonDTO> loadToDataTable() {
-        ArrayList<HoaDonDTO> list = new ArrayList<HoaDonDTO>();
+    public ResultSet loadToDataTable() {
         try {
-            String sql = "SELECT * FROM hoadon";
-            conn = DriverManager.getConnection(url, userName, passWord);
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String sql = "SELECT mahd as 'Mã hóa đơn', mapk as 'Mã phiếu khám', ngaykham as 'Ngày khám', tienthuoc as 'Tiền thuốc', tongtien as 'Tổng tiền' "
+                    + " FROM hoadon";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
-            while (rs.next()) {
-                HoaDonDTO hd = new HoaDonDTO();
-                hd.setMaHD(rs.getString("MaHD"));
-                hd.setMaPK(rs.getString("MaPK"));
-                hd.setNgayLap(rs.getDate("NgayLap"));
-                hd.setTienThuoc(rs.getInt("TienThuoc"));
-                hd.setTongTien(rs.getInt("TongTien"));
-                list.add(hd);
-            }
-            return list;
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex);
-            return new ArrayList<HoaDonDTO>();
+            return null;
         }
+        return rs;
     }
 
     public Boolean them(HoaDonDTO hd) {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String sql = "INSERT INTO HOADON (mahd,mapk,ngaylap,tienthuoc,tongtien) VALUES (?,?,?,?,?)";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
-            pst.setString(0, hd.getMaHD());
-            pst.setString(1, hd.getMaPK());
-            pst.setDate(2, convertUtilToSql(hd.getNgayLap()));
-            pst.setString(3, hd.getMaHD());
-            pst.setString(4, hd.getMaHD());
-            rs = pst.executeQuery();
+            pst.setString(1, hd.getMaHD());
+            pst.setString(2, hd.getMaPK());
+            pst.setDate(3, convertUtilToSql(hd.getNgayLap()));
+            pst.setInt(4, hd.getTienThuoc());
+            pst.setInt(5, hd.getTongTien());
+            pst.executeUpdate();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
             return false;
@@ -71,8 +61,10 @@ public class HoaDonDAL {
     public String LoadThamSo() {
         String data = "";
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String sql = "select GiaTri from THAMSO where MaTS = 'TS001'";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -89,13 +81,15 @@ public class HoaDonDAL {
     public String TimHoaDon(String key) {
         String kq = null;
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String query = "";
             query += " SELECT MaHD";
             query += " FROM HOADON";
             query += " WHERE (mapk LIKE CONCAT('%',?,'%'))";;
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
-            pst.setString(0, key);
+            pst.setString(1, key);
             rs = pst.executeQuery();
             while (rs.next()) {
                 kq = rs.getString("MaHD");
@@ -110,14 +104,16 @@ public class HoaDonDAL {
 
     public ResultSet LoadTienThuoc(String pk) {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String query = "";
-            query += "SELECT bn.HoTen,sum(SoLuong*DonGia) as 'TienThuoc', NgayKham ";
+            query += "SELECT bn.HoTen ,sum(SoLuong*DonGia) as 'TienThuoc', NgayKham ";
             query += "FROM DONTHUOC dt, PHIEUKHAM pk, THUOC t,BENHNHAN bn ";
-            query += "where pk.MaPK=?and pk.MaPK=dt.MaPK and t.MaThuoc=dt.MaThuoc and bn.MaBN=pk.MaBN ";
+            query += "where upper(pk.MaPK)=? and pk.MaPK=dt.MaPK and t.MaThuoc=dt.MaThuoc and bn.MaBN=pk.MaBN ";
             query += "group by pk.MaPK ";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
-            pst.setString(0, pk);
+            pst.setString(1, pk.toUpperCase());
             rs = pst.executeQuery();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex);
@@ -128,12 +124,14 @@ public class HoaDonDAL {
 
     public ResultSet loadDuLieu(String pk) {
         try {
-            String sql = "SELECT t.TenThuoc,SoLuong,SoLuong*DonGia as 'DonGia',CachDung "
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String sql = "SELECT t.TenThuoc as 'Tên thuốc',SoLuong as 'Số lượng',SoLuong*DonGia as 'Đơn giá',CachDung as 'Cách dùng' "
                     + "FROM PHIEUKHAM pk, DONTHUOC dt, THUOC t, CACHDUNG cd "
                     + "where pk.MaPK = dt.MaPK and dt.MaThuoc = t.MaThuoc and cd.MaCD = dt.MaCD and dt.MaPK = ?";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
-            pst.setString(0, pk);
+            pst.setString(1, pk);
             rs = pst.executeQuery();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex);
@@ -141,7 +139,7 @@ public class HoaDonDAL {
         }
         return rs;
     }
-    
+
     private static java.sql.Date convertUtilToSql(java.util.Date uDate) {
         java.sql.Date sDate = new java.sql.Date(uDate.getTime());
         return sDate;

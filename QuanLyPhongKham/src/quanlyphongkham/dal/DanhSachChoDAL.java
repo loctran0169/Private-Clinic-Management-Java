@@ -27,7 +27,7 @@ public class DanhSachChoDAL extends ConnectDB {
                 open();
             }
             String query = "";
-            query += "select PK.MABN,HOTEN,NGAYSINH,GIOITINH,SDT,DIACHI,NGAYKHAM ";
+            query += "select PK.MABN as 'Mã bệnh nhân',HOTEN as 'Họ tên',NGAYSINH as 'Ngày sinh',GIOITINH as 'Giới tính',SDT as 'SĐT',DIACHI as 'Địa chỉ',NGAYKHAM as 'Ngày Khám'";
             query += "from PHIEUKHAM PK,  BENHNHAN BN ";
             query += "where NGAYKHAM = '" + convertUtilToSql(s).toString().trim() + "' and PK.MABN = BN.MABN and MAPK != all(SELECT MAPK FROM DONTHUOC) ";
             pst = conn.prepareStatement(query);

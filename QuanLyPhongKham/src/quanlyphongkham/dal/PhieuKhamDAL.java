@@ -11,33 +11,30 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import quanlyphongkham.dto.BenhNhanDTO;
 import quanlyphongkham.dto.PhieuKhamDTO;
 
 /**
  *
  * @author LQTPL
  */
-public class PhieuKhamDAL {
-    Connection conn = null;
+public class PhieuKhamDAL extends ConnectDB{
     PreparedStatement pst = null;
     ResultSet rs = null;
-
-    String url = "jdbc:mysql://localhost:3306/qlpk";
-    String userName = "root";
-    String passWord = "angel1999"; 
-    
     public Boolean them(PhieuKhamDTO hd) {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String sql = "INSERT INTO PHIEUKHAM VALUES (?,?,?,?,?)";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
-            pst.setString(0, hd.getMaPK());
-            pst.setString(1, hd.getMaBN());
-            pst.setString(2, hd.getMaNV());
-            pst.setString(3, hd.getMaLB());
-            pst.setDate(4, convertUtilToSql(hd.getNgayKham()));
+            pst.setString(1, hd.getMaPK());
+            pst.setString(2, hd.getMaBN());
+            pst.setString(3, hd.getMaNV());
+            pst.setString(4, hd.getMaLB());
+            pst.setDate(5, convertUtilToSql(hd.getNgayKham()));
             
-            rs = pst.executeQuery();
+            pst.executeUpdate();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
             return false;
@@ -47,21 +44,22 @@ public class PhieuKhamDAL {
     
     public Boolean sua(PhieuKhamDTO hd) {
         try {
-            String sql = "UPDATE PHIEUKHAM SET mapk = ?, mabn = ?, manv = ?, malb = ?,ngaykham = ?, ngaykhamlai=? "
-                    + "WHERE mapk = ?";
-            conn = DriverManager.getConnection(url, userName, passWord);
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String sql = "UPDATE phieukham SET mabn = ?, manv = ?, malb = ?,ngaykham = ? "
+                    + " WHERE mapk = ?";
             pst = conn.prepareStatement(sql);
-            pst.setString(0, hd.getMaPK());
+
             pst.setString(1, hd.getMaBN());
             pst.setString(2, hd.getMaNV());
-            pst.setString(3, hd.getMaLB());
+            pst.setString(3, hd.getMaLB());            
             pst.setDate(4, convertUtilToSql(hd.getNgayKham()));
-            pst.setDate(5, convertUtilToSql(hd.getNgayKhamLai()));
-            pst.setString(6, hd.getMaPK());
+            pst.setString(5, hd.getMaPK());
 
-            rs = pst.executeQuery();
+            pst.executeUpdate();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage()+" Sửa");
             return false;
         }
         return true;
@@ -69,11 +67,13 @@ public class PhieuKhamDAL {
     
     public Boolean xoa(PhieuKhamDTO hd) {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String sql = "DELETE FROM PHIEUKHAM WHERE mapk = ?";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
-            pst.setString(0, hd.getMaPK());        
-            rs = pst.executeQuery();
+            pst.setString(1, hd.getMaPK());        
+            pst.executeUpdate();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
             return false;
@@ -83,8 +83,10 @@ public class PhieuKhamDAL {
     
     public ResultSet loadToDataTable() {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String sql = "SELECT * FROM PHIEUKHAM";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
         } catch (Exception e) {
@@ -96,13 +98,15 @@ public class PhieuKhamDAL {
     
     public ResultSet selectByKeyWord(String key) {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String query = "";
             query += " SELECT *";
             query += " FROM PHIEUKHAM";
             query += " WHERE (mapk LIKE CONCAT('%',?,'%'))";
             query += " OR (mabn LIKE CONCAT('%',?,'%'))";
             query += " OR (manv LIKE CONCAT('%',?,'%'))";            
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
             pst.setString(0, key);
             pst.setString(1, key);
@@ -115,7 +119,27 @@ public class PhieuKhamDAL {
         return rs;
     }
     
-    
+    public BenhNhanDTO timBenhNhan(String mabn) {
+        BenhNhanDTO bn = new BenhNhanDTO();
+        try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String sql = "select MaBN,HoTen from benhnhan "
+                    + "where (upper(mabn) LIKE CONCAT('%', '" + mabn.toUpperCase() + "' ,'%'))";
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+            while (rs.next()) {                
+                bn.setMaBN(rs.getString("MaBN"));
+                bn.setHoTen(rs.getString("HoTen"));
+                break;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+            return null;
+        }
+        return bn;
+    }
     
     private static java.sql.Date convertUtilToSql(java.util.Date uDate) {
         java.sql.Date sDate = new java.sql.Date(uDate.getTime());

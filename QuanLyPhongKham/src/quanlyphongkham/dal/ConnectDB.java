@@ -16,10 +16,12 @@ import javax.swing.JOptionPane;
  */
 public class ConnectDB {
 
-    String url = "jdbc:mysql://127.0.0.1:3306/qlpk";
-    String userName = "root";
-    String passWord = "ntrongkhanh";
-
+    public String url = "jdbc:mysql://localhost:3306/qlpk";
+    public String userName = "root";
+    public String passWord = "angel1999";
+    public String port = "3306";
+    public String host = "localhost";
+    
     public Connection conn = null;
 
     public ConnectDB() {

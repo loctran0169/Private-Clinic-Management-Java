@@ -8,7 +8,9 @@ package quanlyphongkham.dal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 import javax.swing.JOptionPane;
 import quanlyphongkham.dto.BenhNhanDTO;
 
@@ -86,7 +88,7 @@ public class BenhNhanDAL extends ConnectDB {
             if (conn == null || conn.isClosed()) {
                 open();
             }
-            String sql = "SELECT * FROM BenhNhan";
+            String sql = "SELECT mabn as 'Mã bệnh nhân', hoten as 'Họ tên', ngaysinh as 'Ngày sinh', gioitinh as 'Giới tính', diachi as 'Địa chỉ', sdt as 'SĐT' FROM BenhNhan";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
         } catch (Exception ex) {
@@ -103,7 +105,7 @@ public class BenhNhanDAL extends ConnectDB {
                 open();
             }
             String query = "";
-            query += " SELECT * ";
+            query += " SELECT mabn as 'Mã bệnh nhân', hoten as 'Họ tên', ngaysinh as 'Ngày sinh', gioitinh as 'Giới tính', diachi as 'Địa chỉ', sdt as 'SĐT'";
             query += " FROM BENHNHAN";
             query += " WHERE (upper(mabn) LIKE CONCAT('%', '" + key.toUpperCase() + "' ,'%'))";
             query += " OR ( upper(Hoten) LIKE CONCAT('%', '" + key.toUpperCase() + "' ,'%'))";
@@ -121,13 +123,15 @@ public class BenhNhanDAL extends ConnectDB {
             if (conn == null || conn.isClosed()) {
                 open();
             }
-            String sql = "select pk.mabn, hoten,ngaysinh,gioitinh,diachi,sdt "
+            String sql = "select pk.mabn as 'Mã bệnh nhân', hoten as 'Họ tên',ngaysinh as 'Ngày sinh',gioitinh as 'Giới tính',diachi as 'Địa chỉ',sdt as 'SĐT'"
                     + "from BENHNHAN bn, PHIEUKHAM pk "
-                    + "where bn.mabn = pk.mabn and year(pk.Ngaykham)= ? and month(pk.Ngaykham)= ? and day(pk.Ngaykham)= ?";
+                    + "where bn.mabn = pk.mabn and year(pk.Ngaykham)= ? and month(pk.Ngaykham)= ? and day(pk.Ngaykham)= ? ";
             pst = conn.prepareStatement(sql);
-            pst.setInt(0, dt.getYear());
-            pst.setInt(1, dt.getMonth());
-            pst.setInt(2, dt.getDay());
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(dt);
+            pst.setString(1, Integer.toString(cal.get(Calendar.YEAR)));
+            pst.setString(2, Integer.toString(cal.get(Calendar.MONTH)+1));
+            pst.setString(3, Integer.toString(cal.get(Calendar.DAY_OF_MONTH)));
             rs = pst.executeQuery();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
