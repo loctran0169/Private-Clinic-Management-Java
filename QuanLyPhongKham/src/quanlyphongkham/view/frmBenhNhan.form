@@ -51,6 +51,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tb_hoten">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <Events>
         <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="tb_hotenFocusLost"/>
       </Events>
@@ -81,6 +84,9 @@
       </Constraints>
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="dtp_ngaysinh">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="101" y="99" width="288" height="-1"/>
@@ -128,6 +134,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tb_sdt">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="607" y="79" width="202" height="-1"/>
@@ -135,6 +144,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="tb_diachi">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="607" y="105" width="202" height="-1"/>
@@ -144,6 +156,7 @@
     <Component class="javax.swing.JRadioButton" name="radioButton1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nam"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioButton1ActionPerformed"/>
@@ -157,6 +170,7 @@
     <Component class="javax.swing.JRadioButton" name="radioButton2">
       <Properties>
         <Property name="text" type="java.lang.String" value="N&#x1eef;"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioButton2ActionPerformed"/>

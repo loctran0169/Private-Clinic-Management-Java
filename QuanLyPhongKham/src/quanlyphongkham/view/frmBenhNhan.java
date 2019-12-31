@@ -85,6 +85,7 @@ public class frmBenhNhan extends javax.swing.JFrame {
         jLabel3.setText("Mã Bệnh Nhân:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 51, -1, -1));
 
+        tb_hoten.setEnabled(false);
         tb_hoten.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 tb_hotenFocusLost(evt);
@@ -97,6 +98,8 @@ public class frmBenhNhan extends javax.swing.JFrame {
 
         jLabel5.setText("Ngày Sinh:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 101, -1, -1));
+
+        dtp_ngaysinh.setEnabled(false);
         getContentPane().add(dtp_ngaysinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 99, 288, -1));
 
         jLabel6.setText("Thông Tin Bệnh Nhân");
@@ -110,10 +113,15 @@ public class frmBenhNhan extends javax.swing.JFrame {
 
         jLabel9.setText("Địa Chỉ:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 111, -1, -1));
+
+        tb_sdt.setEnabled(false);
         getContentPane().add(tb_sdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 79, 202, -1));
+
+        tb_diachi.setEnabled(false);
         getContentPane().add(tb_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 105, 202, -1));
 
         radioButton1.setText("Nam");
+        radioButton1.setEnabled(false);
         radioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioButton1ActionPerformed(evt);
@@ -122,6 +130,7 @@ public class frmBenhNhan extends javax.swing.JFrame {
         getContentPane().add(radioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(607, 54, -1, -1));
 
         radioButton2.setText("Nữ");
+        radioButton2.setEnabled(false);
         radioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioButton2ActionPerformed(evt);
