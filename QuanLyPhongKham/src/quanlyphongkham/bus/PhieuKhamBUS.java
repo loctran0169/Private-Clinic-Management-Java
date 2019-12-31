@@ -3,6 +3,7 @@ package quanlyphongkham.bus;
 import quanlyphongkham.dal.PhieuKhamDAL;
 import quanlyphongkham.dto.PhieuKhamDTO;
 import java.sql.ResultSet;
+import quanlyphongkham.dto.BenhNhanDTO;
 
 /**
  *
@@ -30,5 +31,8 @@ public class PhieuKhamBUS {
 
     public ResultSet selectByKeyWord(String key) {
         return dal.selectByKeyWord(key);
+    }
+    public BenhNhanDTO timBenhNhan(String s){
+        return dal.timBenhNhan(s);
     }
 }

@@ -13,7 +13,7 @@ public class HoaDonBUS {
 
     public HoaDonDAL dal = new HoaDonDAL();
 
-    public ArrayList<HoaDonDTO> loadToDataTable() {
+    public ResultSet loadToDataTable() {
         return dal.loadToDataTable();
     }
 
@@ -31,5 +31,9 @@ public class HoaDonBUS {
 
     public ResultSet loadDuLieu(String pk) {
         return dal.loadDuLieu(pk);
+    }
+    
+    public String TimHoaDon(String s){
+        return dal.TimHoaDon(s);
     }
 }
