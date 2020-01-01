@@ -79,7 +79,7 @@ public class CachDungDAL extends ConnectDB{
     }
     public ResultSet loadTable() {
         try {
-            String sql = "SELECT * FROM CACHDUNG";
+            String sql = "SELECT macd as \"Mã cách dùng\", cachdung as \"Cách dùng\" FROM CACHDUNG";
             conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();

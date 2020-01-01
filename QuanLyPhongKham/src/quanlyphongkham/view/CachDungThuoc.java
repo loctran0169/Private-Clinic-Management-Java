@@ -246,6 +246,7 @@ public class CachDungThuoc extends javax.swing.JFrame {
         flag=3;
         enableTXT();
         setVisibleBtnLuu();
+      
     }//GEN-LAST:event_btn_SuaActionPerformed
     
     private void btn_XoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XoaActionPerformed
@@ -260,6 +261,7 @@ public class CachDungThuoc extends javax.swing.JFrame {
             cachDungBUS.xoa(cachDungDTO);
             // Saving code here
             loadTable();
+            clearTXT();
         }
         
     }//GEN-LAST:event_btn_XoaActionPerformed
