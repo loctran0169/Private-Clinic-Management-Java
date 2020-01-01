@@ -5,10 +5,15 @@
  */
 package quanlyphongkham.view;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 import quanlyphongkham.bus.ThuocBUS;
 import quanlyphongkham.dto.DonViTinhDTO;
+import quanlyphongkham.dto.ThuocDTO;
 
 /**
  *
