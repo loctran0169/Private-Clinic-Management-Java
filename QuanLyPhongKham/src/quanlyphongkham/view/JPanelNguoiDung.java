@@ -1,8 +1,8 @@
 /*
-* To change this license header, choose License Headers in Project Properties.
-* To change this template file, choose Tools | Templates
-* and open the template in the editor.
-*/
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package quanlyphongkham.view;
 
 import java.util.ArrayList;
@@ -11,25 +11,24 @@ import net.proteanit.sql.DbUtils;
 import quanlyphongkham.bus.UserBUS;
 import quanlyphongkham.dto.NhanVienDTO;
 import quanlyphongkham.dto.QuyenHanDTO;
-import quanlyphongkham.dto.ThuocDTO;
 import quanlyphongkham.dto.UserDTO;
 
 /**
  *
- * @author Administrator
+ * @author ADMIN
  */
-public class NguoiDung extends javax.swing.JFrame {
-    
+public class JPanelNguoiDung extends javax.swing.JPanel {
+
     /**
-     * Creates new form QuanLyTaiKhoan
+     * Creates new form JPanelNguoiDung
      */
-    private QuyenHanDTO qhdto;
+     private QuyenHanDTO qhdto;
     private ArrayList<QuyenHanDTO> listQuyenHan=new ArrayList<>();
     private NhanVienDTO nvdto;
     private ArrayList<NhanVienDTO> listNhanVien=new ArrayList<>();
     private UserBUS userBUS;
     private int flag=0;
-    public NguoiDung() {
+    public JPanelNguoiDung() {
         initComponents();
         userBUS=new UserBUS();
         qhdto=new QuyenHanDTO();
@@ -39,8 +38,7 @@ public class NguoiDung extends javax.swing.JFrame {
         setVisibleBtnStart();
         disableTXT();
     }
-    
-    private void loadComboBox()
+ private void loadComboBox()
     {
         listQuyenHan= userBUS.loadQuyenHan();
         for (int i = 0; i < listQuyenHan.size(); i++) {
@@ -193,22 +191,20 @@ public class NguoiDung extends javax.swing.JFrame {
         txt_tennv = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản Lý Tài Khoản");
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setText("Mã Tài Khoản");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 48, -1, -1));
-        getContentPane().add(txt_taikhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 71, 153, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 48, -1, -1));
+        add(txt_taikhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 71, 153, -1));
 
         jLabel4.setText("Tài Khoản");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 74, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 74, -1, -1));
 
         jLabel1.setText("Danh Sách Tài Khoản");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 205, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 205, -1, -1));
 
         jLabel5.setText("Mật Khẩu");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 100, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 100, -1, -1));
 
         table_nguoidung.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -228,17 +224,17 @@ public class NguoiDung extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(table_nguoidung);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 233, 700, 267));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 233, 700, 267));
 
         jLabel6.setText("Thông Tin Tài Khoản");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 122, -1));
-        getContentPane().add(txt_matk, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 45, 153, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 122, -1));
+        add(txt_matk, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 45, 153, -1));
 
         jLabel8.setText("Tên Nhân Viên");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, -1, -1));
 
         jLabel9.setText("Mã Quyền Hạn");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 101, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 101, -1, -1));
 
         btn_sua.setText("Sửa");
         btn_sua.addActionListener(new java.awt.event.ActionListener() {
@@ -246,7 +242,7 @@ public class NguoiDung extends javax.swing.JFrame {
                 btn_suaActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 60, 30));
+        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 60, 30));
 
         btn_xoa.setText("Xóa");
         btn_xoa.addActionListener(new java.awt.event.ActionListener() {
@@ -254,7 +250,7 @@ public class NguoiDung extends javax.swing.JFrame {
                 btn_xoaActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 60, 30));
+        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 60, 30));
 
         btn_them.setText("Thêm");
         btn_them.addActionListener(new java.awt.event.ActionListener() {
@@ -262,15 +258,15 @@ public class NguoiDung extends javax.swing.JFrame {
                 btn_themActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 70, 30));
-        getContentPane().add(txt_matkhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 97, 153, -1));
+        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 70, 30));
+        add(txt_matkhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 97, 153, -1));
 
         combobox_manv.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 combobox_manvItemStateChanged(evt);
             }
         });
-        getContentPane().add(combobox_manv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 153, -1));
+        add(combobox_manv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 153, -1));
 
         btn_luu.setText("Lưu");
         btn_luu.addActionListener(new java.awt.event.ActionListener() {
@@ -278,7 +274,7 @@ public class NguoiDung extends javax.swing.JFrame {
                 btn_luuActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 60, 30));
+        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 60, 30));
 
         btn_huy.setText("Hủy");
         btn_huy.addActionListener(new java.awt.event.ActionListener() {
@@ -286,82 +282,22 @@ public class NguoiDung extends javax.swing.JFrame {
                 btn_huyActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 150, 60, 30));
+        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 150, 60, 30));
 
         combobox_maqh.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 combobox_maqhItemStateChanged(evt);
             }
         });
-        getContentPane().add(combobox_maqh, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 153, -1));
+        add(combobox_maqh, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 153, -1));
 
         txt_tennv.setEnabled(false);
-        getContentPane().add(txt_tennv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 153, -1));
+        add(txt_tennv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 153, -1));
 
         jLabel10.setText("Mã Nhân Viên");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, -1, -1));
-
-        pack();
-        setLocationRelativeTo(null);
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-    
-    private void btn_themActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_themActionPerformed
-        // TODO add your handling code here:
-        flag=1;
-        enableTXT();
-        setVisibleBtnLuu();
-        clearTXT();
-        txt_matk.setText(TaoMaTuDong());
-    }//GEN-LAST:event_btn_themActionPerformed
-    
-    private void btn_luuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_luuActionPerformed
-        // TODO add your handling code here:
-        if (checkNULL()) {
-            JOptionPane.showMessageDialog(null, "Mời bạn nhập đầy đủ thông tin");
-            return;
-        }
-        UserDTO userDTO=new UserDTO(txt_matk.getText().toString(),
-                txt_taikhoan.getText().toString(), txt_matkhau.getText().toString(),
-                combobox_manv.getSelectedItem().toString(), qhdto.getMaQH());
-        if (flag==1) {
-            userBUS.them(userDTO);
-        }
-        else if (flag==3) {
-            userBUS.sua(userDTO);
-        }
-        loadTable();
-        setVisibleBtnStart();
-        disableTXT();
-        clearTXT();
-    }//GEN-LAST:event_btn_luuActionPerformed
-    
-    private void btn_huyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_huyActionPerformed
-        // TODO add your handling code here:
-        setVisibleBtnStart();
-        disableTXT();
-        clearTXT();
-    }//GEN-LAST:event_btn_huyActionPerformed
-    
-    private void btn_suaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_suaActionPerformed
-        // TODO add your handling code here:
-        flag=3;
-        enableTXT();
-        setVisibleBtnLuu();
-    }//GEN-LAST:event_btn_suaActionPerformed
-    
-    private void btn_xoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xoaActionPerformed
-        // TODO add your handling code here:
-        int dialogButton = JOptionPane.YES_NO_OPTION;
-        int dialogResult = JOptionPane.showConfirmDialog (null, "Bạn có chắc chắn muốn xóa","Cảnh báo",dialogButton);
-        if(dialogResult == JOptionPane.YES_OPTION){
-            UserDTO userDTO=new UserDTO(txt_matk.getText().toString());
-            userBUS.xoa(userDTO);
-            loadTable();
-            clearTXT();
-        }
-        
-    }//GEN-LAST:event_btn_xoaActionPerformed
-    
+
     private void table_nguoidungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_nguoidungMouseClicked
         // TODO add your handling code here:
         try {
@@ -374,10 +310,39 @@ public class NguoiDung extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_table_nguoidungMouseClicked
-    
+
+    private void btn_suaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_suaActionPerformed
+        // TODO add your handling code here:
+        flag=3;
+        enableTXT();
+        setVisibleBtnLuu();
+    }//GEN-LAST:event_btn_suaActionPerformed
+
+    private void btn_xoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xoaActionPerformed
+        // TODO add your handling code here:
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog (null, "Bạn có chắc chắn muốn xóa","Cảnh báo",dialogButton);
+        if(dialogResult == JOptionPane.YES_OPTION){
+            UserDTO userDTO=new UserDTO(txt_matk.getText().toString());
+            userBUS.xoa(userDTO);
+            loadTable();
+            clearTXT();
+        }
+
+    }//GEN-LAST:event_btn_xoaActionPerformed
+
+    private void btn_themActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_themActionPerformed
+        // TODO add your handling code here:
+        flag=1;
+        enableTXT();
+        setVisibleBtnLuu();
+        clearTXT();
+        txt_matk.setText(TaoMaTuDong());
+    }//GEN-LAST:event_btn_themActionPerformed
+
     private void combobox_manvItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_combobox_manvItemStateChanged
         // TODO add your handling code here:
-        
+
         for (int i = 0; i < listNhanVien.size(); i++) {
             if (combobox_manv.getSelectedItem().toString().equals(listNhanVien.get(i).getMaNhanVien().toString())) {
                 nvdto=listNhanVien.get(i);
@@ -386,7 +351,35 @@ public class NguoiDung extends javax.swing.JFrame {
         }
         txt_tennv.setText(nvdto.getHoVaTen());
     }//GEN-LAST:event_combobox_manvItemStateChanged
-    
+
+    private void btn_luuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_luuActionPerformed
+        // TODO add your handling code here:
+        if (checkNULL()) {
+            JOptionPane.showMessageDialog(null, "Mời bạn nhập đầy đủ thông tin");
+            return;
+        }
+        UserDTO userDTO=new UserDTO(txt_matk.getText().toString(),
+            txt_taikhoan.getText().toString(), txt_matkhau.getText().toString(),
+            combobox_manv.getSelectedItem().toString(), qhdto.getMaQH());
+        if (flag==1) {
+            userBUS.them(userDTO);
+        }
+        else if (flag==3) {
+            userBUS.sua(userDTO);
+        }
+        loadTable();
+        setVisibleBtnStart();
+        disableTXT();
+        clearTXT();
+    }//GEN-LAST:event_btn_luuActionPerformed
+
+    private void btn_huyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_huyActionPerformed
+        // TODO add your handling code here:
+        setVisibleBtnStart();
+        disableTXT();
+        clearTXT();
+    }//GEN-LAST:event_btn_huyActionPerformed
+
     private void combobox_maqhItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_combobox_maqhItemStateChanged
         // TODO add your handling code here:
         for (int i = 0; i < listQuyenHan.size(); i++) {
@@ -396,41 +389,8 @@ public class NguoiDung extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_combobox_maqhItemStateChanged
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-        * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-        */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NguoiDung.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NguoiDung.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NguoiDung.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NguoiDung.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        
-        /* Create and display the form */
-        
-                new NguoiDung().setVisible(true);
-         
-    }
-    
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_huy;
     private javax.swing.JButton btn_luu;
