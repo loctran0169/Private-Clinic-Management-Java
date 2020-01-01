@@ -11,8 +11,9 @@ package quanlyphongkham.dto;
  */
 public class LoaiBenhDTO {
 
-    public LoaiBenhDTO() {        
+    public LoaiBenhDTO() {
     }
+    
 
     public String getMaLB() {
         return MaLB;
