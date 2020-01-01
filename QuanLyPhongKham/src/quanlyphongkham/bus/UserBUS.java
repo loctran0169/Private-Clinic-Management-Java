@@ -7,6 +7,7 @@ package quanlyphongkham.bus;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import javax.swing.JTable;
 import quanlyphongkham.dal.UserDAL;
 import quanlyphongkham.dto.NhanVienDTO;
 import quanlyphongkham.dto.QuyenHanDTO;
@@ -53,6 +54,8 @@ public class UserBUS {
     }
     public ArrayList<QuyenHanDTO>  loadQuyenHan(){
         return dal.loadQuyenHan();
-        
+    }
+    public JTable dangNhap(UserDTO us){
+            return dal.dangNhap(us);
     }
 }
