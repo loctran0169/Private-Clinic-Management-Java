@@ -177,6 +177,23 @@ public class UserDAL extends ConnectDB{
             return null;
         }
     }
+    public JTable dangNhap(UserDTO us) {
+        JTable jTable = new JTable();
+        try {
+            String sql = "select * from USERS where taikhoan=? and matkhau=?";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(url, userName, passWord);
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, us.getTaiKhoan());
+            pst.setString(2, us.getMatKhau());
+            rs = pst.executeQuery();
+            jTable.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+            return null;
+        }
+        return jTable;
+    }
      
 //    public  boolean checkPass(string tk, string mk)
 //    {
