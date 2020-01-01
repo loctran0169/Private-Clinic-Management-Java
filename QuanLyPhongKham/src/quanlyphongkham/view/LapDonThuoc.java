@@ -80,7 +80,7 @@ public class LapDonThuoc extends javax.swing.JFrame {
    
     private boolean checkNULL()
     {
-        if (txt_soluong.getText().toString().equals("")) {
+        if (txt_soluong.getText().toString().equals("") || combobox_cachdung.getSelectedItem().toString().equals("")|| combobox_tenthuoc.getSelectedItem().toString().equals("")) {
             return true;
         }
         return false;
@@ -363,7 +363,7 @@ public class LapDonThuoc extends javax.swing.JFrame {
     private void btn_luuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_luuActionPerformed
         // TODO add your handling code here:
         if (checkNULL()) {
-            JOptionPane.showMessageDialog(null, "Mời bạn nhập số lượng");
+            JOptionPane.showMessageDialog(null, "Mời bạn nhập đầy đủ thông tin");
             return;
         }
         LapDonThuocDTO lapDonThuocDTO=new LapDonThuocDTO(combobox_mapk.getSelectedItem().toString(),
@@ -485,8 +485,7 @@ public class LapDonThuoc extends javax.swing.JFrame {
     private void table_donthuocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_donthuocMouseClicked
         // TODO add your handling code here:
         try {
-            int index=table_donthuoc.getSelectedRow();
-           
+            int index=table_donthuoc.getSelectedRow();           
             combobox_tenthuoc.setSelectedItem(table_donthuoc.getValueAt(index, 1).toString());           
             combobox_cachdung.setSelectedItem(table_donthuoc.getValueAt(index, 6).toString());
             txt_soluong.setText(table_donthuoc.getValueAt(index, 2).toString());
