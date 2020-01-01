@@ -261,8 +261,8 @@ public class CachDungThuoc extends javax.swing.JFrame {
             cachDungBUS.xoa(cachDungDTO);
             // Saving code here
             loadTable();
-            clearTXT();
-        }
+          
+        }  clearTXT();
         
     }//GEN-LAST:event_btn_XoaActionPerformed
     

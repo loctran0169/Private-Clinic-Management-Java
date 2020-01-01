@@ -254,6 +254,13 @@ public class LapDonThuoc extends javax.swing.JFrame {
                 combobox_tenthuocItemStateChanged(evt);
             }
         });
+        combobox_tenthuoc.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                combobox_tenthuocInputMethodTextChanged(evt);
+            }
+        });
         getContentPane().add(combobox_tenthuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 190, -1));
 
         combobox_cachdung.addItemListener(new java.awt.event.ItemListener() {
@@ -407,6 +414,7 @@ public class LapDonThuoc extends javax.swing.JFrame {
                 break;
             }
         }
+        
         if(!txt_soluong.equals(""))
         {
             long gia=0;
@@ -428,6 +436,7 @@ public class LapDonThuoc extends javax.swing.JFrame {
                 break;
             }
         }
+       
     }//GEN-LAST:event_combobox_cachdungItemStateChanged
     
     private void txt_soluongInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_txt_soluongInputMethodTextChanged
@@ -486,6 +495,10 @@ public class LapDonThuoc extends javax.swing.JFrame {
         catch (Exception e) {
         }
     }//GEN-LAST:event_table_donthuocMouseClicked
+
+    private void combobox_tenthuocInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_combobox_tenthuocInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_combobox_tenthuocInputMethodTextChanged
     
     /**
      * @param args the command line arguments

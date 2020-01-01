@@ -38,11 +38,11 @@ public class LapDonThuocDTO {
         this.TrieuChung = TrieuChung;
     }
 
-    public LapDonThuocDTO(String MaPK, String MaThuoc, int SoLuong, String MaDV) {
+    public LapDonThuocDTO(String MaPK, String MaThuoc, int SoLuong, String MaCD) {
         this.MaPK = MaPK;
         this.MaThuoc = MaThuoc;
         this.SoLuong = SoLuong;
-        this.MaDV = MaDV;
+        this.MaCD = MaCD;
     }
     
 
