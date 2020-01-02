@@ -58,4 +58,7 @@ public class UserBUS {
     public JTable dangNhap(UserDTO us){
             return dal.dangNhap(us);
     }
+     public ResultSet loadDuLieuThongTinNV(String matk){
+         return dal.loadDuLieuThongTinNV(matk);
+     }
 }
