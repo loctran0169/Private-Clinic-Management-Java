@@ -161,6 +161,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        group = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txt_sdt = new javax.swing.JTextField();
@@ -294,6 +295,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
         });
         add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, -1, 30));
 
+        group.add(radio_nam);
         radio_nam.setText("Nam");
         radio_nam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -302,6 +304,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
         });
         add(radio_nam, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
 
+        group.add(radio_nu);
         radio_nu.setText("Nữ");
         add(radio_nu, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
@@ -441,6 +444,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
     private javax.swing.JButton btn_them;
     private javax.swing.JButton btn_xoa;
     private com.toedter.calendar.JDateChooser datePicker;
+    private javax.swing.ButtonGroup group;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
