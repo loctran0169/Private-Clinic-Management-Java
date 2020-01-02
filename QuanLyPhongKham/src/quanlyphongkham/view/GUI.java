@@ -99,12 +99,12 @@ public class GUI extends javax.swing.JFrame {
 
         jTabbedPane11 = new javax.swing.JTabbedPane();
         jTabbedPane7 = new javax.swing.JTabbedPane();
+        panelNguoiDung = new javax.swing.JPanel();
+        panelQuyenHan = new javax.swing.JPanel();
+        panelLichSuDangNhap = new javax.swing.JPanel();
+        panelThayDoiMatKhau = new javax.swing.JPanel();
         panelSaoLuu = new javax.swing.JPanel();
         panelKhoiPhuc = new javax.swing.JPanel();
-        panelNguoiDung = new javax.swing.JPanel();
-        panelLichSuDangNhap = new javax.swing.JPanel();
-        panelQuyenHan = new javax.swing.JPanel();
-        panelThayDoiMatKhau = new javax.swing.JPanel();
         panelBenhNhan1 = new javax.swing.JTabbedPane();
         panelNhanVien = new javax.swing.JPanel();
         panelBN = new javax.swing.JPanel();
@@ -139,6 +139,58 @@ public class GUI extends javax.swing.JFrame {
 
         jTabbedPane11.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
+        javax.swing.GroupLayout panelNguoiDungLayout = new javax.swing.GroupLayout(panelNguoiDung);
+        panelNguoiDung.setLayout(panelNguoiDungLayout);
+        panelNguoiDungLayout.setHorizontalGroup(
+            panelNguoiDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 893, Short.MAX_VALUE)
+        );
+        panelNguoiDungLayout.setVerticalGroup(
+            panelNguoiDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        jTabbedPane7.addTab("Người dùng", panelNguoiDung);
+
+        javax.swing.GroupLayout panelQuyenHanLayout = new javax.swing.GroupLayout(panelQuyenHan);
+        panelQuyenHan.setLayout(panelQuyenHanLayout);
+        panelQuyenHanLayout.setHorizontalGroup(
+            panelQuyenHanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 893, Short.MAX_VALUE)
+        );
+        panelQuyenHanLayout.setVerticalGroup(
+            panelQuyenHanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        jTabbedPane7.addTab("Quyền hạn", panelQuyenHan);
+
+        javax.swing.GroupLayout panelLichSuDangNhapLayout = new javax.swing.GroupLayout(panelLichSuDangNhap);
+        panelLichSuDangNhap.setLayout(panelLichSuDangNhapLayout);
+        panelLichSuDangNhapLayout.setHorizontalGroup(
+            panelLichSuDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 893, Short.MAX_VALUE)
+        );
+        panelLichSuDangNhapLayout.setVerticalGroup(
+            panelLichSuDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        jTabbedPane7.addTab("Lịch sử đăng nhập", panelLichSuDangNhap);
+
+        javax.swing.GroupLayout panelThayDoiMatKhauLayout = new javax.swing.GroupLayout(panelThayDoiMatKhau);
+        panelThayDoiMatKhau.setLayout(panelThayDoiMatKhauLayout);
+        panelThayDoiMatKhauLayout.setHorizontalGroup(
+            panelThayDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 893, Short.MAX_VALUE)
+        );
+        panelThayDoiMatKhauLayout.setVerticalGroup(
+            panelThayDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        jTabbedPane7.addTab("Thay đổi mật khẩu", panelThayDoiMatKhau);
+
         javax.swing.GroupLayout panelSaoLuuLayout = new javax.swing.GroupLayout(panelSaoLuu);
         panelSaoLuu.setLayout(panelSaoLuuLayout);
         panelSaoLuuLayout.setHorizontalGroup(
@@ -164,58 +216,6 @@ public class GUI extends javax.swing.JFrame {
         );
 
         jTabbedPane7.addTab("Khôi phục", panelKhoiPhuc);
-
-        javax.swing.GroupLayout panelNguoiDungLayout = new javax.swing.GroupLayout(panelNguoiDung);
-        panelNguoiDung.setLayout(panelNguoiDungLayout);
-        panelNguoiDungLayout.setHorizontalGroup(
-            panelNguoiDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 893, Short.MAX_VALUE)
-        );
-        panelNguoiDungLayout.setVerticalGroup(
-            panelNguoiDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 575, Short.MAX_VALUE)
-        );
-
-        jTabbedPane7.addTab("Người dùng", panelNguoiDung);
-
-        javax.swing.GroupLayout panelLichSuDangNhapLayout = new javax.swing.GroupLayout(panelLichSuDangNhap);
-        panelLichSuDangNhap.setLayout(panelLichSuDangNhapLayout);
-        panelLichSuDangNhapLayout.setHorizontalGroup(
-            panelLichSuDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 893, Short.MAX_VALUE)
-        );
-        panelLichSuDangNhapLayout.setVerticalGroup(
-            panelLichSuDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 575, Short.MAX_VALUE)
-        );
-
-        jTabbedPane7.addTab("Lịch sử đăng nhập", panelLichSuDangNhap);
-
-        javax.swing.GroupLayout panelQuyenHanLayout = new javax.swing.GroupLayout(panelQuyenHan);
-        panelQuyenHan.setLayout(panelQuyenHanLayout);
-        panelQuyenHanLayout.setHorizontalGroup(
-            panelQuyenHanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 893, Short.MAX_VALUE)
-        );
-        panelQuyenHanLayout.setVerticalGroup(
-            panelQuyenHanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 575, Short.MAX_VALUE)
-        );
-
-        jTabbedPane7.addTab("Quyền hạn", panelQuyenHan);
-
-        javax.swing.GroupLayout panelThayDoiMatKhauLayout = new javax.swing.GroupLayout(panelThayDoiMatKhau);
-        panelThayDoiMatKhau.setLayout(panelThayDoiMatKhauLayout);
-        panelThayDoiMatKhauLayout.setHorizontalGroup(
-            panelThayDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 893, Short.MAX_VALUE)
-        );
-        panelThayDoiMatKhauLayout.setVerticalGroup(
-            panelThayDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 575, Short.MAX_VALUE)
-        );
-
-        jTabbedPane7.addTab("Thay đổi mật khẩu", panelThayDoiMatKhau);
 
         jTabbedPane11.addTab("Hệ thống", jTabbedPane7);
 
