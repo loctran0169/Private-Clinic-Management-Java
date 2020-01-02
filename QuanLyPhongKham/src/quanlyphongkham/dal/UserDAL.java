@@ -157,6 +157,21 @@ public class UserDAL extends ConnectDB{
             return null;
         }
     }
+    public ResultSet loadDuLieuThongTinNV(String matk)
+    {
+        try {
+            //String query = "select * from NHANVIEN,users where  nhanvien.manv=users.manv and users.manv=\""+matk+"\"";
+            String query = "select tenquyenhan,nhanvien.manv,hoten,gioitinh,ngaysinh,diachi,sdt,chucvu,users.maus,taikhoan,matkhau,users.maqh,noidung "
+                    + "from NHANVIEN,users,quyenhan where  nhanvien.manv=users.manv and users.maqh=quyenhan.maqh and users.manv=\""+matk+"\"";
+            pst = conn.prepareStatement(query);
+            rs = pst.executeQuery();
+            
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+            return null;
+        }
+        return rs;
+    }
     public ArrayList<QuyenHanDTO>  loadQuyenHan()
     {
         ArrayList<QuyenHanDTO> list=new ArrayList<>();
