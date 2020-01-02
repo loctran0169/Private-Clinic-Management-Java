@@ -52,6 +52,15 @@ public class GUI extends javax.swing.JFrame {
         
         panelLapDonThuoc.setLayout(new BorderLayout());
         panelLapDonThuoc.add(new JPanelLapDonThuoc());
+        
+        panelNguoiDung.setLayout(new BorderLayout());
+        panelNguoiDung.add(new JPanelNguoiDung());
+        
+        panelNhanVien.setLayout(new BorderLayout());
+        panelNhanVien.add(new JPanelNhanVien());
+        
+        panelThuoc.setLayout(new BorderLayout());
+        panelThuoc.add(new JPanelThongTinThuoc());
     }
 
     @SuppressWarnings("unchecked")
@@ -62,8 +71,9 @@ public class GUI extends javax.swing.JFrame {
         jTabbedPane7 = new javax.swing.JTabbedPane();
         panelSaoLuu = new javax.swing.JPanel();
         panelKhoiPhuc = new javax.swing.JPanel();
+        panelNguoiDung = new javax.swing.JPanel();
         panelBenhNhan1 = new javax.swing.JTabbedPane();
-        jPanel8 = new javax.swing.JPanel();
+        panelNhanVien = new javax.swing.JPanel();
         panelBN = new javax.swing.JPanel();
         panelDanhSachKhamBenh = new javax.swing.JPanel();
         panelDanhSachCho = new javax.swing.JPanel();
@@ -72,7 +82,7 @@ public class GUI extends javax.swing.JFrame {
         panelHoaDon = new javax.swing.JPanel();
         jTabbedPane9 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        panelThuoc = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         panelCachDung = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -113,20 +123,33 @@ public class GUI extends javax.swing.JFrame {
 
         jTabbedPane7.addTab("Khôi phục", panelKhoiPhuc);
 
-        jTabbedPane11.addTab("Hệ thống", jTabbedPane7);
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelNguoiDungLayout = new javax.swing.GroupLayout(panelNguoiDung);
+        panelNguoiDung.setLayout(panelNguoiDungLayout);
+        panelNguoiDungLayout.setHorizontalGroup(
+            panelNguoiDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 906, Short.MAX_VALUE)
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelNguoiDungLayout.setVerticalGroup(
+            panelNguoiDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 575, Short.MAX_VALUE)
         );
 
-        panelBenhNhan1.addTab("Nhân viên", jPanel8);
+        jTabbedPane7.addTab("Người dùng", panelNguoiDung);
+
+        jTabbedPane11.addTab("Hệ thống", jTabbedPane7);
+
+        javax.swing.GroupLayout panelNhanVienLayout = new javax.swing.GroupLayout(panelNhanVien);
+        panelNhanVien.setLayout(panelNhanVienLayout);
+        panelNhanVienLayout.setHorizontalGroup(
+            panelNhanVienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 906, Short.MAX_VALUE)
+        );
+        panelNhanVienLayout.setVerticalGroup(
+            panelNhanVienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        panelBenhNhan1.addTab("Nhân viên", panelNhanVien);
 
         javax.swing.GroupLayout panelBNLayout = new javax.swing.GroupLayout(panelBN);
         panelBN.setLayout(panelBNLayout);
@@ -221,18 +244,18 @@ public class GUI extends javax.swing.JFrame {
 
         jTabbedPane9.addTab("Tham số", jPanel2);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelThuocLayout = new javax.swing.GroupLayout(panelThuoc);
+        panelThuoc.setLayout(panelThuocLayout);
+        panelThuocLayout.setHorizontalGroup(
+            panelThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 906, Short.MAX_VALUE)
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelThuocLayout.setVerticalGroup(
+            panelThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 575, Short.MAX_VALUE)
         );
 
-        jTabbedPane9.addTab("Thuốc", jPanel5);
+        jTabbedPane9.addTab("Thuốc", panelThuoc);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -324,9 +347,7 @@ public class GUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
     private javax.swing.JTabbedPane jTabbedPane7;
@@ -341,6 +362,9 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel panelKhoiPhuc;
     private javax.swing.JPanel panelLapDonThuoc;
     private javax.swing.JPanel panelLapPhieuKham;
+    private javax.swing.JPanel panelNguoiDung;
+    private javax.swing.JPanel panelNhanVien;
     private javax.swing.JPanel panelSaoLuu;
+    private javax.swing.JPanel panelThuoc;
     // End of variables declaration//GEN-END:variables
 }
