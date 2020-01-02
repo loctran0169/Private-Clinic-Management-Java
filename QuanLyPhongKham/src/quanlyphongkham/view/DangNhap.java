@@ -7,9 +7,15 @@ package quanlyphongkham.view;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import quanlyphongkham.bus.LichSuBUS;
 import quanlyphongkham.bus.UserBUS;
+import quanlyphongkham.dto.LichSuDTO;
 import quanlyphongkham.dto.UserDTO;
 
 
@@ -105,6 +111,11 @@ public class DangNhap extends javax.swing.JFrame {
                 us.setMaQuyenHan(jTable.getModel().getValueAt(0, 4).toString());
                
                 JOptionPane.showMessageDialog(null, "Đăng nhập thành công");
+                LichSuBUS busLS = new LichSuBUS();
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
+                LocalDateTime now = LocalDateTime.now();
+                Date dateNgapLap = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(dtf.format(now));
+                busLS.them(new LichSuDTO(us.getMaUS(), convertUtilToSql(dateNgapLap)));
                 GUI f = new GUI(us);
                 f.setVisible(true);
                 dispose();
@@ -143,6 +154,11 @@ public class DangNhap extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtMatKhauKeyPressed
 
+    private static java.sql.Date convertUtilToSql(java.util.Date uDate) {
+        java.sql.Date sDate = new java.sql.Date(uDate.getTime());
+        return sDate;
+    }
+    
     private void txtThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtThoatActionPerformed
         this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
     }//GEN-LAST:event_txtThoatActionPerformed
