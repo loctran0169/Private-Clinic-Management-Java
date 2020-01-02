@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import quanlyphongkham.dal.HoaDonDAL;
 import quanlyphongkham.dto.HoaDonDTO;
 import java.sql.ResultSet;
+import java.util.Date;
 
 /**
  *
@@ -35,5 +36,11 @@ public class HoaDonBUS {
     
     public String TimHoaDon(String s){
         return dal.TimHoaDon(s);
+    }
+    public ResultSet BaoCaoDoanhThuThang(Date s) {
+        return dal.BaoCaoDoanhThuThang(s);
+    }
+    public ResultSet BaoCaoSuDungThuocThang(Date s) {
+        return dal.BaoCaoSuDungThuocThang(s);
     }
 }
