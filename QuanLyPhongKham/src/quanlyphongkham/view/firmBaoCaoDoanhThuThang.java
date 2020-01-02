@@ -89,7 +89,7 @@ public class firmBaoCaoDoanhThuThang extends javax.swing.JPanel {
             return;
         }
         try {
-            tb_baocao.setModel(DbUtils.resultSetToTableModel(bus.BaoCaoDoanhThuThangThang(date_ngay.getDate())));
+            tb_baocao.setModel(DbUtils.resultSetToTableModel(bus.BaoCaoDoanhThuThang(date_ngay.getDate())));
             if (tb_baocao.getModel() == null || tb_baocao.getRowCount() == 0) {
                 JOptionPane.showMessageDialog(null, "Không có thông tin trong tháng này");
             }
