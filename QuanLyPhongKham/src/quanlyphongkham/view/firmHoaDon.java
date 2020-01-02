@@ -26,7 +26,12 @@ public class firmHoaDon extends javax.swing.JPanel {
 
     public firmHoaDon() {
         initComponents();
-        tb_tienkham.setText(bus.loadThamSo());
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                tb_tienkham.setText(bus.loadThamSo());
+            }
+        });
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -65,7 +70,7 @@ public class firmHoaDon extends javax.swing.JPanel {
         add(bt_xem, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, 95, 30));
 
         jLabel4.setText("Mã Phiếu Khám:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
 
         bt_in.setText("Lập Hóa Đơn");
         bt_in.addActionListener(new java.awt.event.ActionListener() {
@@ -74,13 +79,13 @@ public class firmHoaDon extends javax.swing.JPanel {
             }
         });
         add(bt_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, -1, 30));
-        add(tb_pk, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 114, -1));
+        add(tb_pk, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 114, -1));
 
         tb_hoten.setEnabled(false);
-        add(tb_hoten, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 170, -1));
+        add(tb_hoten, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 170, -1));
 
         jLabel5.setText("Họ Và Tên Bệnh Nhân:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, -1));
 
         jLabel1.setText("Thông Tin Hóa Đơn");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
@@ -91,7 +96,7 @@ public class firmHoaDon extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
         tb_thuoc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

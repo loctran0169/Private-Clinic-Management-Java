@@ -27,7 +27,12 @@ public class firmThamSo extends javax.swing.JPanel {
         txtMaThamSo.setEnabled(false);
         txtGiaTri.setEnabled(false);
         txtTenThamSo.setEnabled(false);
-        ReloadDb();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                ReloadDb();
+            }
+        });  
+        
     }
     
     @SuppressWarnings("unchecked")

@@ -22,7 +22,11 @@ public class firmQuyenHan extends javax.swing.JPanel {
         initComponents();
         qhBUS = new QuyenHanBUS();
         ChiDoc();
-        HienThiThongTinQuyenHanVaoTable();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                HienThiThongTinQuyenHanVaoTable();
+            }
+        });        
         tbQuyenHan.changeSelection(0, 0, false, false);
         HienThiThongTinQuyenHan();
     }

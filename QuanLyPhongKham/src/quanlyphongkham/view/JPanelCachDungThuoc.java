@@ -26,7 +26,11 @@ public class JPanelCachDungThuoc extends javax.swing.JPanel {
     public JPanelCachDungThuoc() {
         initComponents();
         cachDungBUS=new CachDungBUS();
-        loadTable();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                loadTable();
+            }
+        });        
         setVisibleBtnStart();
         disableTXT();
     }

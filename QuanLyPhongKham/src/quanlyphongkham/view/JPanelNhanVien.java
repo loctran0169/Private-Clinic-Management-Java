@@ -28,7 +28,11 @@ public class JPanelNhanVien extends javax.swing.JPanel {
     public JPanelNhanVien() {
         initComponents();
         nhanVienBUS=new NhanVienBUS();
-        loadTable();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                loadTable();
+            }
+        });        
         setVisibleBtnStart();
         disableTXT();
     }

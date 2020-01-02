@@ -37,7 +37,11 @@ public class JPanelThongTinTaiKhoan extends javax.swing.JPanel {
         userBUS = new UserBUS();
         this.udto=udto;
         rs = userBUS.loadDuLieuThongTinNV(udto.getMaNV());
-        loadThongTin();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                loadThongTin();
+            }
+        });        
     }
     
     private void loadThongTin() {

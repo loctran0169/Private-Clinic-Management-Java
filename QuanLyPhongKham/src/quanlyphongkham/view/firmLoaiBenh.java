@@ -14,7 +14,11 @@ public class firmLoaiBenh extends javax.swing.JPanel {
     public firmLoaiBenh() {
         initComponents();
         KhoaButton();
-        ReloadDb();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                ReloadDb();
+            }
+        });        
     }
 
     @SuppressWarnings("unchecked")

@@ -36,8 +36,12 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
         dTO=new LapDonThuocDTO();
         thuocDTO=new ThuocDTO();
         cachDungDTO=new CachDungDTO();
-        loadComboBox();
-        loadTable();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                loadComboBox();
+                loadTable();
+            }
+        });
         setVisibleBtnStart();
         disableTXT();
     }

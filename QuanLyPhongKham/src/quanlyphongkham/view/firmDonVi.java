@@ -14,7 +14,12 @@ public class firmDonVi extends javax.swing.JPanel {
     public firmDonVi() {
         initComponents();
         KhoaButton();
-        ReloadDb();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                ReloadDb();
+            }
+        });
+        
     }
     
     @SuppressWarnings("unchecked")

@@ -32,8 +32,12 @@ public class JPanelThongTinThuoc extends javax.swing.JPanel {
         initComponents();
         tbus=new ThuocBUS();
         donViTinhDTO=new DonViTinhDTO();
-        loadTable();
-        loadComboBox();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                loadTable();
+                loadComboBox();
+            }
+        });        
         setVisibleBtnStart();
         disableTXT();
     }

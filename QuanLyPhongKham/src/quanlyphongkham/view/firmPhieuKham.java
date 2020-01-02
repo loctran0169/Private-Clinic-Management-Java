@@ -37,9 +37,13 @@ public class firmPhieuKham extends javax.swing.JPanel {
     
     public firmPhieuKham() {
         initComponents();
-        loadBacSi();
-        loadLoaiBenh();
-        loadTable();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                loadBacSi();
+                loadLoaiBenh();
+                loadTable();
+            }
+        });        
         btn_tim.setVisible(false);
     }
     @SuppressWarnings("unchecked")

@@ -33,8 +33,13 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
         userBUS=new UserBUS();
         qhdto=new QuyenHanDTO();
         nvdto=new NhanVienDTO();
-        loadComboBox();
-        loadTable();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                loadComboBox();
+                loadTable();
+            }
+        });
+        
         setVisibleBtnStart();
         disableTXT();
     }

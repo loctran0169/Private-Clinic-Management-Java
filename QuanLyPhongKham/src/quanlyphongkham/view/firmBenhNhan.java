@@ -25,9 +25,12 @@ public class firmBenhNhan extends javax.swing.JPanel {
         initComponents();
         dtp_ngaysinh.setDateFormatString("yyyy-MM-dd");
         ChiDoc();
-        loadData();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                loadData();
+            }
+        });        
         tb_sdt.addKeyListener(new java.awt.event.KeyAdapter() {
-
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 try {
                     long number = Long.parseLong(tb_sdt.getText());
