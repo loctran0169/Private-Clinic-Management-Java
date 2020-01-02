@@ -30,6 +30,7 @@ public class firmDanhSachCho extends javax.swing.JPanel {
         btn_load = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(819, 502));
 
         tb_dsCho.setModel(new javax.swing.table.DefaultTableModel(
@@ -44,6 +45,7 @@ public class firmDanhSachCho extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tb_dsCho);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 102, 255));
         jLabel3.setText("Danh Sách Chờ Khám Bệnh ");
 
         date_load.setDateFormatString("dd-MM-yyyy");

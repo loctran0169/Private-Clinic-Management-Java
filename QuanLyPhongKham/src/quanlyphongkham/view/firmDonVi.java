@@ -39,6 +39,7 @@ public class firmDonVi extends javax.swing.JPanel {
         btnSua = new javax.swing.JButton();
         btnLoad = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tbDonVi.setModel(new javax.swing.table.DefaultTableModel(

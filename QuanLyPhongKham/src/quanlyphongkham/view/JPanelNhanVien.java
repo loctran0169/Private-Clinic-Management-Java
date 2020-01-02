@@ -191,6 +191,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
         radio_nam = new javax.swing.JRadioButton();
         radio_nu = new javax.swing.JRadioButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(819, 502));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

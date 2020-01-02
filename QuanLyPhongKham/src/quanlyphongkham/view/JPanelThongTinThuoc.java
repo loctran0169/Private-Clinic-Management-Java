@@ -197,6 +197,7 @@ private void loadComboBox()
         btn_them = new javax.swing.JButton();
         btn_sua = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(819, 502));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

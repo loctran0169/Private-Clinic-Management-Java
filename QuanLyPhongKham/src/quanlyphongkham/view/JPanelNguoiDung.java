@@ -196,6 +196,7 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
         txt_tennv = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(819, 502));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

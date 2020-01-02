@@ -95,6 +95,7 @@ public class JPanelThongTinTaiKhoan extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         txt_quyenhan = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setText("SĐT:");
@@ -130,6 +131,7 @@ public class JPanelThongTinTaiKhoan extends javax.swing.JPanel {
         add(txt_sdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 169, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Thông Tin Tài Khoản");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));

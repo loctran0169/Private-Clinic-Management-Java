@@ -46,6 +46,8 @@ public class firmQuyenHan extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         txtNoiDung = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 204, 255));
+
         jLabel1.setText("Thông Tin Quyền Hạn");
 
         jLabel2.setText("Mã Quyền Hạn:");

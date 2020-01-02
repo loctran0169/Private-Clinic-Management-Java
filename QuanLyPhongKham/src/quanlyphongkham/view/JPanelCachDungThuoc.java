@@ -160,6 +160,7 @@ public class JPanelCachDungThuoc extends javax.swing.JPanel {
         txt_MaCachDung = new javax.swing.JTextField();
         txt_CachDung = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(819, 502));
 
         jLabel8.setText("Mã Cách Dùng:");

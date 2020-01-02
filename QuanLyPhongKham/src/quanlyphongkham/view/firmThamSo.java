@@ -52,6 +52,8 @@ public class firmThamSo extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         txtGiaTri = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 204, 255));
+
         jLabel3.setText("Tên tham số:");
 
         btnHuy.setText("Hủy");

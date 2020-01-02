@@ -41,6 +41,7 @@ public class firmLichSuDangNhap extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         txtMaNhanVien = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtChucVu.setEditable(false);
@@ -116,6 +117,7 @@ public class firmLichSuDangNhap extends javax.swing.JPanel {
         add(txtSDT, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 330, 170, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setText("Thông Tin Tài Khoản");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 120, -1, -1));
 

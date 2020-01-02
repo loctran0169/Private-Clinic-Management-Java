@@ -32,6 +32,7 @@ public class firmKhoiPhuc extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(819, 502));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -55,6 +56,7 @@ public class firmKhoiPhuc extends javax.swing.JPanel {
         add(tb_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 210, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setText("Khôi phục dữ liệu");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, -1, -1));
 

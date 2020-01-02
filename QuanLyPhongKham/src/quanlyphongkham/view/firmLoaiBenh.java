@@ -40,6 +40,7 @@ public class firmLoaiBenh extends javax.swing.JPanel {
         btnLuu = new javax.swing.JButton();
         btnHuy = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Mã loại bệnh:");

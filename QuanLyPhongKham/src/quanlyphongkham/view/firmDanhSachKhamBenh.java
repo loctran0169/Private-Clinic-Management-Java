@@ -31,6 +31,7 @@ public class firmDanhSachKhamBenh extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tb_dsBenh = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(819, 502));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -38,6 +39,7 @@ public class firmDanhSachKhamBenh extends javax.swing.JPanel {
         add(date_load, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 224, 29));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 102, 255));
         jLabel3.setText("Danh Sách Khám Bệnh ");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 

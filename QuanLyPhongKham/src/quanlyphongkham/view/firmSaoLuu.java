@@ -36,12 +36,14 @@ public class firmSaoLuu extends javax.swing.JPanel {
 
         jLabel4.setText("Thư Mục:");
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tb_thumuc.setEnabled(false);
         add(tb_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 200, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setText("Thông Tin Sao Lưu");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 181, -1));
 

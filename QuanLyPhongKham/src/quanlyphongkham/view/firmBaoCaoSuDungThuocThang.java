@@ -36,7 +36,9 @@ public class firmBaoCaoSuDungThuocThang extends javax.swing.JPanel {
         tb_baocao = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
         date_ngay = new com.toedter.calendar.JDateChooser();
+        jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_xem.setText("Xem");
@@ -45,7 +47,7 @@ public class firmBaoCaoSuDungThuocThang extends javax.swing.JPanel {
                 btn_xemActionPerformed(evt);
             }
         });
-        add(btn_xem, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 85, 40));
+        add(btn_xem, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 85, 40));
 
         btn_in.setText("In Báo Cáo");
         btn_in.addActionListener(new java.awt.event.ActionListener() {
@@ -53,7 +55,7 @@ public class firmBaoCaoSuDungThuocThang extends javax.swing.JPanel {
                 btn_inActionPerformed(evt);
             }
         });
-        add(btn_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, 40));
+        add(btn_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, -1, 40));
 
         tb_baocao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -69,10 +71,15 @@ public class firmBaoCaoSuDungThuocThang extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 217, 880, 350));
 
         jLabel5.setText("Chọn Tháng:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, -1, 24));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, 24));
 
         date_ngay.setDateFormatString("MM-yyyy");
-        add(date_ngay, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 197, -1));
+        add(date_ngay, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 197, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel1.setText("Báo cáo sử dụng thuốc theo tháng");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_xemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xemActionPerformed
@@ -114,6 +121,7 @@ public class firmBaoCaoSuDungThuocThang extends javax.swing.JPanel {
     private javax.swing.JButton btn_in;
     private javax.swing.JButton btn_xem;
     private com.toedter.calendar.JDateChooser date_ngay;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tb_baocao;

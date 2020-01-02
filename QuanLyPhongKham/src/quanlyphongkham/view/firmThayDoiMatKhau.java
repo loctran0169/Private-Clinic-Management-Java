@@ -31,9 +31,11 @@ public class firmThayDoiMatKhau extends javax.swing.JPanel {
         txtMatKhauMoi = new javax.swing.JPasswordField();
         txtNhapLaiMatKhau = new javax.swing.JPasswordField();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Đổi Mật Khẩu");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, -1, -1));

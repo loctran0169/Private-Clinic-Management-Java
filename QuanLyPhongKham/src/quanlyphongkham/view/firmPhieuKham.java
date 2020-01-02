@@ -73,6 +73,7 @@ public class firmPhieuKham extends javax.swing.JPanel {
         tb_tenbn = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(819, 502));
 
         btn_huy.setText("Hủy");

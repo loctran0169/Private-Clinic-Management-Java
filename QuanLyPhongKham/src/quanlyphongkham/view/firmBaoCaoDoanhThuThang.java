@@ -35,7 +35,9 @@ public class firmBaoCaoDoanhThuThang extends javax.swing.JPanel {
         btn_inbaocao = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tb_baocao = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Chọn tháng:");
@@ -50,7 +52,7 @@ public class firmBaoCaoDoanhThuThang extends javax.swing.JPanel {
                 btn_xemActionPerformed(evt);
             }
         });
-        add(btn_xem, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 85, 30));
+        add(btn_xem, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 85, 40));
 
         btn_inbaocao.setText("In Báo Cáo");
         btn_inbaocao.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +60,7 @@ public class firmBaoCaoDoanhThuThang extends javax.swing.JPanel {
                 btn_inbaocaoActionPerformed(evt);
             }
         });
-        add(btn_inbaocao, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, 30));
+        add(btn_inbaocao, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, 40));
 
         tb_baocao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -81,6 +83,11 @@ public class firmBaoCaoDoanhThuThang extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tb_baocao);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 217, 886, 347));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel2.setText("Báo cáo doanh thu theo tháng");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_xemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xemActionPerformed
@@ -123,6 +130,7 @@ public class firmBaoCaoDoanhThuThang extends javax.swing.JPanel {
     private javax.swing.JButton btn_xem;
     private com.toedter.calendar.JDateChooser date_ngay;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tb_baocao;
     // End of variables declaration//GEN-END:variables

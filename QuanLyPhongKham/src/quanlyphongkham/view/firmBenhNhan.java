@@ -72,6 +72,7 @@ public class firmBenhNhan extends javax.swing.JPanel {
         btn_luu = new javax.swing.JButton();
         btn_huy = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tb_mabn.setEnabled(false);
