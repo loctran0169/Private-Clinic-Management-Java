@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import quanlyphongkham.dto.HoaDonDTO;
 
@@ -140,6 +141,50 @@ public class HoaDonDAL extends ConnectDB {
         return rs;
     }
 
+    public ResultSet BaoCaoDoanhThuThang(Date date) {
+        try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String query = "";
+            query += " SELECT NgayLap,COUNT(*) as   'SoLuongBenhNhan', sum(tongtien) as 'DoanhThu',sum(tongtien)*100/(SELECT sum(tongtien)";
+            query += " FROM HOADON where year(HOADON.NgayLap)= year(?) and month(HOADON.NgayLap) = month(?)) as 'TyLe' FROM HOADON ";
+            query += " where year(HOADON.NgayLap)= year(?) and month(HOADON.NgayLap) = month(?) ";
+            query += " group by NgayLap";
+            pst = conn.prepareStatement(query);
+            pst.setDate(1, convertUtilToSql(date));
+            pst.setDate(2, convertUtilToSql(date));
+            pst.setDate(3, convertUtilToSql(date));
+            pst.setDate(4, convertUtilToSql(date));
+            rs = pst.executeQuery();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+            return null;
+        }
+        return rs;
+    }
+    
+    public ResultSet BaoCaoSuDungThuocThang(Date date) {
+        try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String query = "";
+            query += " SELECT TenThuoc,dv.TenDonVi ,sum(SoLuong) as   'SoLuong', count(TenThuoc) as 'SoLanDung' ";
+            query += " FROM DONTHUOC dt, HOADON hd, THUOC t,DONVITINH dv ";
+            query += " where year(hd.NgayLap) =year(?) and month(hd.NgayLap) = month(?) and hd.MaPK=dt.MaPK and t.MaThuoc=dt.MaThuoc and dv.MaDV=t.MaDV ";
+            query += " group by t.MaThuoc";
+            pst = conn.prepareStatement(query);
+            pst.setDate(1, convertUtilToSql(date));
+            pst.setDate(2, convertUtilToSql(date));
+            rs = pst.executeQuery();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+            return null;
+        }
+        return rs;
+    }
+    
     private static java.sql.Date convertUtilToSql(java.util.Date uDate) {
         java.sql.Date sDate = new java.sql.Date(uDate.getTime());
         return sDate;
