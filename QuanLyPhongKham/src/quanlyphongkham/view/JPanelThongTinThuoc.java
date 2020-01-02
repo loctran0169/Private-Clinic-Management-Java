@@ -234,7 +234,7 @@ private void loadComboBox()
                 txt_tenloaithuocActionPerformed(evt);
             }
         });
-        add(txt_tenloaithuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 171, -1));
+        add(txt_tenloaithuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 171, -1));
 
         btn_luu.setText("Lưu");
         btn_luu.addActionListener(new java.awt.event.ActionListener() {
@@ -245,7 +245,7 @@ private void loadComboBox()
         add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, 95, 30));
 
         jLabel5.setText("Đơn Vị Tính:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
 
         jLabel1.setText("Thông Tin Thuốc");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
@@ -296,7 +296,7 @@ private void loadComboBox()
                 combobox_donvitinhItemStateChanged(evt);
             }
         });
-        add(combobox_donvitinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 170, -1));
+        add(combobox_donvitinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 170, -1));
 
         btn_them.setText("Thêm");
         btn_them.addActionListener(new java.awt.event.ActionListener() {

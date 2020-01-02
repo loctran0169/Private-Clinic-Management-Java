@@ -201,17 +201,17 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setText("Mã Tài Khoản");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
-        add(txt_taikhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 153, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, -1, -1));
+        add(txt_taikhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 153, -1));
 
         jLabel4.setText("Tài Khoản");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, 10));
 
         jLabel1.setText("Danh Sách Tài Khoản");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 205, -1, -1));
 
         jLabel5.setText("Mật Khẩu");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, -1, 10));
 
         table_nguoidung.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -266,7 +266,7 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
             }
         });
         add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 70, 30));
-        add(txt_matkhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 153, -1));
+        add(txt_matkhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 153, -1));
 
         combobox_manv.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
