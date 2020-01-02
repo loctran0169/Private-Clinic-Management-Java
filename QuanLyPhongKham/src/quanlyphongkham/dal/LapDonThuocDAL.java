@@ -25,18 +25,15 @@ public class LapDonThuocDAL extends ConnectDB{
    
     PreparedStatement pst = null;
     ResultSet rs = null;
-//    String url = "jdbc:mysql://mysql-6474-0.cloudclusters.net:10001/qlpk";
-//    String userName = "loctran0169";
-//    String passWord = "angel1999";
-    String url = "jdbc:mysql://127.0.0.1:3306/qlpk";
-    String userName = "root";
-    String passWord = "ntrongkhanh";
     public LapDonThuocDAL() {
     }
     public ArrayList<LapDonThuocDTO> loadPhieuKham() {
         ArrayList<LapDonThuocDTO> list=new ArrayList<>();
         
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String sql = "SELECT * \n" +
                     "FROM phieukham,benhnhan,benh\n" +
                     "where phieukham.MaBN=benhnhan.MaBN and benh.MaLB=phieukham.MaLB";
@@ -57,8 +54,10 @@ public class LapDonThuocDAL extends ConnectDB{
     {
         ArrayList<ThuocDTO> list=new ArrayList<>();
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String sql = "SELECT * FROM THUOC";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             while( rs.next() ) {
@@ -76,8 +75,10 @@ public class LapDonThuocDAL extends ConnectDB{
     {
         ArrayList<CachDungDTO> list=new ArrayList<>();
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String sql = "SELECT * FROM CACHDUNG";
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             while( rs.next() ) {
@@ -93,9 +94,10 @@ public class LapDonThuocDAL extends ConnectDB{
     public boolean them(LapDonThuocDTO dto)
     {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String query = "insert DONTHUOC set MAPK=?,MATHUOC=?,SOLUONG=?,MACD=?";
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
             pst.setString(1, dto.getMaPK());
             pst.setString(2, dto.getMaThuoc());
@@ -112,9 +114,10 @@ public class LapDonThuocDAL extends ConnectDB{
     public boolean sua(LapDonThuocDTO dto)
     {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String query = "update DONTHUOC set SOLUONG=?,MACD=? where MAPK=? and MATHUOC=?";
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
             
             pst.setInt(1, dto.getSoLuong());
@@ -132,12 +135,11 @@ public class LapDonThuocDAL extends ConnectDB{
     public boolean xoa(LapDonThuocDTO dto)
     {
         try {
-            String query = "delete from DONTHUOC where mathuoc=? and mapk=?";
-            Class.forName("com.mysql.cj.jdbc.Driver");
-           
-            pst = conn.prepareStatement(query);
-            
-            
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String query = "delete from DONTHUOC where mathuoc=? and mapk=?";        
+            pst = conn.prepareStatement(query);    
             pst.setString(1, dto.getMaThuoc());
             pst.setString(2, dto.getMaPK());
             
@@ -151,6 +153,9 @@ public class LapDonThuocDAL extends ConnectDB{
     }
     public ResultSet loadTable(String s) {
         try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
             String query = "SELECT DT.MaThuoc as \"Mã thuốc\",TenThuoc as \"Tên thuốc\",SoLuong as \"Số lượng\",TenDonVi as \"Tên đơn vị\","
                     + "DonGia as \"Đơn giá\",DT.MACD as \"Mã cách dùng\",CachDung  as \"Cách dùng\"";
             query += "FROM DONTHUOC DT ";
@@ -162,7 +167,6 @@ public class LapDonThuocDAL extends ConnectDB{
             query += " JOIN BENH B ON PK.MALB=B.MALB ";
             query += "WHERE DT.MAPK=\""+s+"\"";
             
-            conn = DriverManager.getConnection(url, userName, passWord);
             pst = conn.prepareStatement(query);
             rs = pst.executeQuery();
             

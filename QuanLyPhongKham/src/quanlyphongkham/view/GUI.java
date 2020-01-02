@@ -46,6 +46,12 @@ public class GUI extends javax.swing.JFrame {
         
         panelLapPhieuKham.setLayout(new BorderLayout());
         panelLapPhieuKham.add(new firmPhieuKham());
+        
+        panelCachDung.setLayout(new BorderLayout());
+        panelCachDung.add(new JPanelCachDungThuoc());
+        
+        panelLapDonThuoc.setLayout(new BorderLayout());
+        panelLapDonThuoc.add(new JPanelLapDonThuoc());
     }
 
     @SuppressWarnings("unchecked")
@@ -62,9 +68,14 @@ public class GUI extends javax.swing.JFrame {
         panelDanhSachKhamBenh = new javax.swing.JPanel();
         panelDanhSachCho = new javax.swing.JPanel();
         panelLapPhieuKham = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        panelLapDonThuoc = new javax.swing.JPanel();
         panelHoaDon = new javax.swing.JPanel();
         jTabbedPane9 = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        panelCachDung = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
         jTabbedPane10 = new javax.swing.JTabbedPane();
         jTabbedPane8 = new javax.swing.JTabbedPane();
 
@@ -169,18 +180,18 @@ public class GUI extends javax.swing.JFrame {
 
         panelBenhNhan1.addTab("Lập phiếu khám bệnh", panelLapPhieuKham);
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelLapDonThuocLayout = new javax.swing.GroupLayout(panelLapDonThuoc);
+        panelLapDonThuoc.setLayout(panelLapDonThuocLayout);
+        panelLapDonThuocLayout.setHorizontalGroup(
+            panelLapDonThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 906, Short.MAX_VALUE)
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelLapDonThuocLayout.setVerticalGroup(
+            panelLapDonThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 575, Short.MAX_VALUE)
         );
 
-        panelBenhNhan1.addTab("Lập đơn thốc", jPanel6);
+        panelBenhNhan1.addTab("Lập đơn thốc", panelLapDonThuoc);
 
         javax.swing.GroupLayout panelHoaDonLayout = new javax.swing.GroupLayout(panelHoaDon);
         panelHoaDon.setLayout(panelHoaDonLayout);
@@ -196,6 +207,72 @@ public class GUI extends javax.swing.JFrame {
         panelBenhNhan1.addTab("Lập hóa đơn", panelHoaDon);
 
         jTabbedPane11.addTab("Quản lý", panelBenhNhan1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 906, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        jTabbedPane9.addTab("Tham số", jPanel2);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 906, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        jTabbedPane9.addTab("Thuốc", jPanel5);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 906, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        jTabbedPane9.addTab("Đơn vị tính", jPanel3);
+
+        javax.swing.GroupLayout panelCachDungLayout = new javax.swing.GroupLayout(panelCachDung);
+        panelCachDung.setLayout(panelCachDungLayout);
+        panelCachDungLayout.setHorizontalGroup(
+            panelCachDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 906, Short.MAX_VALUE)
+        );
+        panelCachDungLayout.setVerticalGroup(
+            panelCachDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        jTabbedPane9.addTab("Cách dùng", panelCachDung);
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 906, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 575, Short.MAX_VALUE)
+        );
+
+        jTabbedPane9.addTab("Loại bệnh", jPanel7);
+
         jTabbedPane11.addTab("Danh mục", jTabbedPane9);
         jTabbedPane11.addTab("Báo cáo", jTabbedPane10);
         jTabbedPane11.addTab("Giớ thiệu", jTabbedPane8);
@@ -245,26 +322,24 @@ public class GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane10;
     private javax.swing.JTabbedPane jTabbedPane11;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTabbedPane jTabbedPane6;
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JTabbedPane jTabbedPane9;
     private javax.swing.JPanel panelBN;
-    private javax.swing.JTabbedPane panelBenhNhan;
     private javax.swing.JTabbedPane panelBenhNhan1;
+    private javax.swing.JPanel panelCachDung;
     private javax.swing.JPanel panelDanhSachCho;
     private javax.swing.JPanel panelDanhSachKhamBenh;
     private javax.swing.JPanel panelHoaDon;
     private javax.swing.JPanel panelKhoiPhuc;
+    private javax.swing.JPanel panelLapDonThuoc;
     private javax.swing.JPanel panelLapPhieuKham;
     private javax.swing.JPanel panelSaoLuu;
     // End of variables declaration//GEN-END:variables
