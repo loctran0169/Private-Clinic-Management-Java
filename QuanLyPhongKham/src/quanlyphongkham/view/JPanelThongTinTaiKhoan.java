@@ -98,22 +98,31 @@ public class JPanelThongTinTaiKhoan extends javax.swing.JPanel {
 
         jLabel11.setText("Quyền Hạn:");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 370, 60, -1));
+
+        txt_diachi.setEditable(false);
         add(txt_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 170, -1));
 
         jLabel8.setText("Địa Chỉ:");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, -1, -1));
+
+        txt_taikhoan.setEditable(false);
         add(txt_taikhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 270, 170, -1));
 
         jLabel9.setText("Tài Khoản:");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, -1, -1));
+
+        txt_matkhau.setEditable(false);
         add(txt_matkhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, 170, -1));
 
+        txt_ngaysinh.setEditable(false);
         txt_ngaysinh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_ngaysinhActionPerformed(evt);
             }
         });
         add(txt_ngaysinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 170, -1));
+
+        txt_sdt.setEditable(false);
         add(txt_sdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 169, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -124,6 +133,7 @@ public class JPanelThongTinTaiKhoan extends javax.swing.JPanel {
         jLabel2.setText("Mã Nhân Viên:");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
 
+        txt_manv.setEditable(false);
         txt_manv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_manvActionPerformed(evt);
@@ -133,14 +143,20 @@ public class JPanelThongTinTaiKhoan extends javax.swing.JPanel {
 
         jLabel3.setText("Chức Vụ:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, -1));
+
+        txt_gioitinh.setEditable(false);
         add(txt_gioitinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 50, -1));
 
         jLabel4.setText("Họ Và Tên Nhân Viên:");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+
+        txt_hoten.setEditable(false);
         add(txt_hoten, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 170, -1));
 
         jLabel5.setText("Ngày Sinh:");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
+
+        txt_chucvu.setEditable(false);
         add(txt_chucvu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, 170, -1));
 
         jLabel10.setText("Mật Khẩu:");
@@ -148,6 +164,8 @@ public class JPanelThongTinTaiKhoan extends javax.swing.JPanel {
 
         jLabel6.setText("Giới Tính:");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, -1, -1));
+
+        txt_quyenhan.setEditable(false);
         add(txt_quyenhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, 170, -1));
     }// </editor-fold>//GEN-END:initComponents
 

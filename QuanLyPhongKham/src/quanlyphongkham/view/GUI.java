@@ -91,6 +91,9 @@ public class GUI extends javax.swing.JFrame {
         
         panelDoanhThu.setLayout(new BorderLayout());
         panelDoanhThu.add(new firmBaoCaoDoanhThuThang());
+        
+        panelThongTin.setLayout(new BorderLayout());
+        panelThongTin.add(new JPanelThongTinTaiKhoan(us));
     }
 
     @SuppressWarnings("unchecked")
@@ -99,6 +102,7 @@ public class GUI extends javax.swing.JFrame {
 
         jTabbedPane11 = new javax.swing.JTabbedPane();
         jTabbedPane7 = new javax.swing.JTabbedPane();
+        panelThongTin = new javax.swing.JPanel();
         panelNguoiDung = new javax.swing.JPanel();
         panelQuyenHan = new javax.swing.JPanel();
         panelLichSuDangNhap = new javax.swing.JPanel();
@@ -133,17 +137,29 @@ public class GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quản Lý Phòng Mạch Tư");
-        setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 630));
 
         jTabbedPane11.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
+        javax.swing.GroupLayout panelThongTinLayout = new javax.swing.GroupLayout(panelThongTin);
+        panelThongTin.setLayout(panelThongTinLayout);
+        panelThongTinLayout.setHorizontalGroup(
+            panelThongTinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 906, Short.MAX_VALUE)
+        );
+        panelThongTinLayout.setVerticalGroup(
+            panelThongTinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 557, Short.MAX_VALUE)
+        );
+
+        jTabbedPane7.addTab("Thông tin tài khoản", new javax.swing.ImageIcon(getClass().getResource("/image/thông tin.png")), panelThongTin); // NOI18N
+
         javax.swing.GroupLayout panelNguoiDungLayout = new javax.swing.GroupLayout(panelNguoiDung);
         panelNguoiDung.setLayout(panelNguoiDungLayout);
         panelNguoiDungLayout.setHorizontalGroup(
             panelNguoiDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelNguoiDungLayout.setVerticalGroup(
             panelNguoiDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +172,7 @@ public class GUI extends javax.swing.JFrame {
         panelQuyenHan.setLayout(panelQuyenHanLayout);
         panelQuyenHanLayout.setHorizontalGroup(
             panelQuyenHanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelQuyenHanLayout.setVerticalGroup(
             panelQuyenHanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,7 +185,7 @@ public class GUI extends javax.swing.JFrame {
         panelLichSuDangNhap.setLayout(panelLichSuDangNhapLayout);
         panelLichSuDangNhapLayout.setHorizontalGroup(
             panelLichSuDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelLichSuDangNhapLayout.setVerticalGroup(
             panelLichSuDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,7 +198,7 @@ public class GUI extends javax.swing.JFrame {
         panelThayDoiMatKhau.setLayout(panelThayDoiMatKhauLayout);
         panelThayDoiMatKhauLayout.setHorizontalGroup(
             panelThayDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelThayDoiMatKhauLayout.setVerticalGroup(
             panelThayDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,7 +211,7 @@ public class GUI extends javax.swing.JFrame {
         panelSaoLuu.setLayout(panelSaoLuuLayout);
         panelSaoLuuLayout.setHorizontalGroup(
             panelSaoLuuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelSaoLuuLayout.setVerticalGroup(
             panelSaoLuuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,7 +224,7 @@ public class GUI extends javax.swing.JFrame {
         panelKhoiPhuc.setLayout(panelKhoiPhucLayout);
         panelKhoiPhucLayout.setHorizontalGroup(
             panelKhoiPhucLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelKhoiPhucLayout.setVerticalGroup(
             panelKhoiPhucLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,7 +239,7 @@ public class GUI extends javax.swing.JFrame {
         panelNhanVien.setLayout(panelNhanVienLayout);
         panelNhanVienLayout.setHorizontalGroup(
             panelNhanVienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelNhanVienLayout.setVerticalGroup(
             panelNhanVienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,7 +252,7 @@ public class GUI extends javax.swing.JFrame {
         panelBN.setLayout(panelBNLayout);
         panelBNLayout.setHorizontalGroup(
             panelBNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelBNLayout.setVerticalGroup(
             panelBNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,7 +265,7 @@ public class GUI extends javax.swing.JFrame {
         panelDanhSachKhamBenh.setLayout(panelDanhSachKhamBenhLayout);
         panelDanhSachKhamBenhLayout.setHorizontalGroup(
             panelDanhSachKhamBenhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelDanhSachKhamBenhLayout.setVerticalGroup(
             panelDanhSachKhamBenhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,7 +278,7 @@ public class GUI extends javax.swing.JFrame {
         panelDanhSachCho.setLayout(panelDanhSachChoLayout);
         panelDanhSachChoLayout.setHorizontalGroup(
             panelDanhSachChoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelDanhSachChoLayout.setVerticalGroup(
             panelDanhSachChoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,7 +291,7 @@ public class GUI extends javax.swing.JFrame {
         panelLapPhieuKham.setLayout(panelLapPhieuKhamLayout);
         panelLapPhieuKhamLayout.setHorizontalGroup(
             panelLapPhieuKhamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelLapPhieuKhamLayout.setVerticalGroup(
             panelLapPhieuKhamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,7 +304,7 @@ public class GUI extends javax.swing.JFrame {
         panelLapDonThuoc.setLayout(panelLapDonThuocLayout);
         panelLapDonThuocLayout.setHorizontalGroup(
             panelLapDonThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelLapDonThuocLayout.setVerticalGroup(
             panelLapDonThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,7 +317,7 @@ public class GUI extends javax.swing.JFrame {
         panelHoaDon.setLayout(panelHoaDonLayout);
         panelHoaDonLayout.setHorizontalGroup(
             panelHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelHoaDonLayout.setVerticalGroup(
             panelHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -316,7 +332,7 @@ public class GUI extends javax.swing.JFrame {
         panelThamSo.setLayout(panelThamSoLayout);
         panelThamSoLayout.setHorizontalGroup(
             panelThamSoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelThamSoLayout.setVerticalGroup(
             panelThamSoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,7 +345,7 @@ public class GUI extends javax.swing.JFrame {
         panelThuoc.setLayout(panelThuocLayout);
         panelThuocLayout.setHorizontalGroup(
             panelThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelThuocLayout.setVerticalGroup(
             panelThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,7 +358,7 @@ public class GUI extends javax.swing.JFrame {
         panelDonVi.setLayout(panelDonViLayout);
         panelDonViLayout.setHorizontalGroup(
             panelDonViLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelDonViLayout.setVerticalGroup(
             panelDonViLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,7 +371,7 @@ public class GUI extends javax.swing.JFrame {
         panelCachDung.setLayout(panelCachDungLayout);
         panelCachDungLayout.setHorizontalGroup(
             panelCachDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelCachDungLayout.setVerticalGroup(
             panelCachDungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -368,7 +384,7 @@ public class GUI extends javax.swing.JFrame {
         panelLoaiBenh.setLayout(panelLoaiBenhLayout);
         panelLoaiBenhLayout.setHorizontalGroup(
             panelLoaiBenhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelLoaiBenhLayout.setVerticalGroup(
             panelLoaiBenhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -383,7 +399,7 @@ public class GUI extends javax.swing.JFrame {
         panelDoanhThu.setLayout(panelDoanhThuLayout);
         panelDoanhThuLayout.setHorizontalGroup(
             panelDoanhThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelDoanhThuLayout.setVerticalGroup(
             panelDoanhThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -396,7 +412,7 @@ public class GUI extends javax.swing.JFrame {
         panelSuDungThuoc.setLayout(panelSuDungThuocLayout);
         panelSuDungThuocLayout.setHorizontalGroup(
             panelSuDungThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         panelSuDungThuocLayout.setVerticalGroup(
             panelSuDungThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -445,7 +461,7 @@ public class GUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 1072, Short.MAX_VALUE)
+                .addComponent(jTabbedPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -516,6 +532,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel panelSuDungThuoc;
     private javax.swing.JPanel panelThamSo;
     private javax.swing.JPanel panelThayDoiMatKhau;
+    private javax.swing.JPanel panelThongTin;
     private javax.swing.JPanel panelThuoc;
     // End of variables declaration//GEN-END:variables
 }

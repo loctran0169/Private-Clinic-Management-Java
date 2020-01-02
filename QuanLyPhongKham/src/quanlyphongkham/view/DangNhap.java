@@ -139,7 +139,9 @@ public class DangNhap extends javax.swing.JFrame {
                 us.setMaQuyenHan(jTable.getModel().getValueAt(0, 4).toString());
                
                 JOptionPane.showMessageDialog(null, "Đăng nhập thành công");
-                //mo form chinh               
+                GUI f = new GUI(us);
+                f.setVisible(true);
+                dispose();
             } else {
                 JOptionPane.showMessageDialog(null, "Tài khoản hoặc mật khẩu không chính xác");
             }
