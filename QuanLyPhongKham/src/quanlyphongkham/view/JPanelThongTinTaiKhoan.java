@@ -8,6 +8,7 @@ package quanlyphongkham.view;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import quanlyphongkham.bus.UserBUS;
+import quanlyphongkham.dto.UserDTO;
 
 /**
  *
@@ -21,6 +22,8 @@ public class JPanelThongTinTaiKhoan extends javax.swing.JPanel {
     private ResultSet rs;
     private UserBUS userBUS;
     private String manv;
+    private UserDTO udto;
+   
     public JPanelThongTinTaiKhoan() {
         initComponents();
         rs = null;
@@ -28,12 +31,12 @@ public class JPanelThongTinTaiKhoan extends javax.swing.JPanel {
         rs = userBUS.loadDuLieuThongTinNV("nv001");
         loadThongTin();
     }
-    public JPanelThongTinTaiKhoan(String manv) {
+    public JPanelThongTinTaiKhoan(UserDTO udto) {
         initComponents();
-        this.manv=manv;
         rs = null;
         userBUS = new UserBUS();
-        rs = userBUS.loadDuLieuThongTinNV(manv);
+        this.udto=udto;
+        rs = userBUS.loadDuLieuThongTinNV(udto.getMaNV());
         loadThongTin();
     }
     
