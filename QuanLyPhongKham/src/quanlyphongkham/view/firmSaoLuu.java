@@ -39,11 +39,11 @@ public class firmSaoLuu extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tb_thumuc.setEnabled(false);
-        add(tb_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 200, -1));
+        add(tb_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 200, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Thông Tin Sao Lưu");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 181, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 181, -1));
 
         btn_thumuc.setText("Thư mục");
         btn_thumuc.addActionListener(new java.awt.event.ActionListener() {
@@ -51,7 +51,7 @@ public class firmSaoLuu extends javax.swing.JPanel {
                 btn_thumucActionPerformed(evt);
             }
         });
-        add(btn_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, -1, -1));
+        add(btn_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, -1, -1));
 
         btn_saoluu.setText("Sao Lưu");
         btn_saoluu.addActionListener(new java.awt.event.ActionListener() {
@@ -59,10 +59,10 @@ public class firmSaoLuu extends javax.swing.JPanel {
                 btn_saoluuActionPerformed(evt);
             }
         });
-        add(btn_saoluu, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, -1, -1));
+        add(btn_saoluu, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, -1, -1));
 
         jLabel2.setText("Thư mục");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_thumucActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_thumucActionPerformed

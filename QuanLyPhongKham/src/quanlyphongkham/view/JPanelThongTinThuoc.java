@@ -193,6 +193,7 @@ private void loadComboBox()
         btn_them = new javax.swing.JButton();
         btn_sua = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(819, 502));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         table_thuoc.setModel(new javax.swing.table.DefaultTableModel(
@@ -210,10 +211,10 @@ private void loadComboBox()
         });
         jScrollPane1.setViewportView(table_thuoc);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 216, 698, 284));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 216, 890, 350));
 
         jLabel4.setText("Tên Loại Thuốc:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 87, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
 
         btn_xoa.setText("Xóa");
         btn_xoa.addActionListener(new java.awt.event.ActionListener() {
@@ -221,14 +222,14 @@ private void loadComboBox()
                 btn_xoaActionPerformed(evt);
             }
         });
-        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 95, 30));
+        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 95, 30));
 
         txt_tenloaithuoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_tenloaithuocActionPerformed(evt);
             }
         });
-        add(txt_tenloaithuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 84, 171, -1));
+        add(txt_tenloaithuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 171, -1));
 
         btn_luu.setText("Lưu");
         btn_luu.addActionListener(new java.awt.event.ActionListener() {
@@ -236,10 +237,10 @@ private void loadComboBox()
                 btn_luuActionPerformed(evt);
             }
         });
-        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 95, 30));
+        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, 95, 30));
 
         jLabel5.setText("Đơn Vị Tính:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 114, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
 
         jLabel1.setText("Thông Tin Thuốc");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
@@ -249,13 +250,13 @@ private void loadComboBox()
                 txt_mathuocActionPerformed(evt);
             }
         });
-        add(txt_mathuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 58, 170, -1));
+        add(txt_mathuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 170, -1));
 
         jLabel6.setText("HSD:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, -1, -1));
 
         jLabel2.setText("Mã Loại Thuốc:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 61, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
 
         txt_dongia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,13 +268,13 @@ private void loadComboBox()
                 txt_dongiaKeyPressed(evt);
             }
         });
-        add(txt_dongia, new org.netbeans.lib.awtextra.AbsoluteConstraints(478, 112, 170, -1));
+        add(txt_dongia, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 150, -1));
 
         jLabel7.setText("Đơn Giá:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, -1, -1));
 
         jLabel3.setText("NSX:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, -1, -1));
 
         btn_huy.setText("Hủy");
         btn_huy.addActionListener(new java.awt.event.ActionListener() {
@@ -281,16 +282,16 @@ private void loadComboBox()
                 btn_huyActionPerformed(evt);
             }
         });
-        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 95, 30));
-        add(datePicker_nsx, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 50, 170, -1));
-        add(datePicker_hsd, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 170, -1));
+        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 95, 30));
+        add(datePicker_nsx, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 50, 170, -1));
+        add(datePicker_hsd, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, 170, -1));
 
         combobox_donvitinh.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 combobox_donvitinhItemStateChanged(evt);
             }
         });
-        add(combobox_donvitinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 110, 170, -1));
+        add(combobox_donvitinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 170, -1));
 
         btn_them.setText("Thêm");
         btn_them.addActionListener(new java.awt.event.ActionListener() {
@@ -298,7 +299,7 @@ private void loadComboBox()
                 btn_themActionPerformed(evt);
             }
         });
-        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 95, 30));
+        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 95, 30));
 
         btn_sua.setText("Sửa");
         btn_sua.addActionListener(new java.awt.event.ActionListener() {
@@ -306,7 +307,7 @@ private void loadComboBox()
                 btn_suaActionPerformed(evt);
             }
         });
-        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 95, 30));
+        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, 95, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void table_thuocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_thuocMouseClicked

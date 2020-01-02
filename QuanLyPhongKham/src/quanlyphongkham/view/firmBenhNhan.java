@@ -69,9 +69,13 @@ public class firmBenhNhan extends javax.swing.JPanel {
         btn_luu = new javax.swing.JButton();
         btn_huy = new javax.swing.JButton();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         tb_mabn.setEnabled(false);
+        add(tb_mabn, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 80, 288, -1));
 
         jLabel3.setText("Mã Bệnh Nhân:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 82, -1, -1));
 
         tb_hoten.setEnabled(false);
         tb_hoten.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -79,24 +83,34 @@ public class firmBenhNhan extends javax.swing.JPanel {
                 tb_hotenFocusLost(evt);
             }
         });
+        add(tb_hoten, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 104, 288, -1));
 
         jLabel4.setText("Họ Và Tên:");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 107, -1, -1));
 
         jLabel5.setText("Ngày Sinh:");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 132, -1, -1));
 
         dtp_ngaysinh.setEnabled(false);
+        add(dtp_ngaysinh, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 130, 288, -1));
 
         jLabel6.setText("Thông Tin Bệnh Nhân");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 36, 122, -1));
 
         jLabel7.setText("Giớ Tính:");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 89, -1, -1));
 
         jLabel8.setText("Số Điện Thoại:");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 116, -1, -1));
 
         jLabel9.setText("Địa Chỉ:");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 142, -1, -1));
 
         tb_sdt.setEnabled(false);
+        add(tb_sdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 110, 202, -1));
 
         tb_diachi.setEnabled(false);
+        add(tb_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 136, 202, -1));
 
         radioButton1.setText("Nam");
         radioButton1.setEnabled(false);
@@ -105,6 +119,7 @@ public class firmBenhNhan extends javax.swing.JPanel {
                 radioButton1ActionPerformed(evt);
             }
         });
+        add(radioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 85, -1, -1));
 
         radioButton2.setText("Nữ");
         radioButton2.setEnabled(false);
@@ -113,6 +128,7 @@ public class firmBenhNhan extends javax.swing.JPanel {
                 radioButton2ActionPerformed(evt);
             }
         });
+        add(radioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(743, 85, -1, -1));
 
         tb_benhnhan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,12 +148,16 @@ public class firmBenhNhan extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tb_benhnhan);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 304, 880, 260));
+        add(tb_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 225, 165, -1));
+
         btn_search.setText("Tìm Kiếm");
         btn_search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_searchActionPerformed(evt);
             }
         });
+        add(btn_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 220, 95, 30));
 
         btn_load.setText("Load Dữ Liệu");
         btn_load.addActionListener(new java.awt.event.ActionListener() {
@@ -145,8 +165,10 @@ public class firmBenhNhan extends javax.swing.JPanel {
                 btn_loadActionPerformed(evt);
             }
         });
+        add(btn_load, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 220, -1, 30));
 
         jLabel1.setText("Danh Sách Bệnh Nhân");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 283, -1, -1));
 
         btn_them.setText("Thêm");
         btn_them.addActionListener(new java.awt.event.ActionListener() {
@@ -154,6 +176,7 @@ public class firmBenhNhan extends javax.swing.JPanel {
                 btn_themActionPerformed(evt);
             }
         });
+        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, -1, 30));
 
         btn_xoa.setText("Xóa");
         btn_xoa.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +184,7 @@ public class firmBenhNhan extends javax.swing.JPanel {
                 btn_xoaActionPerformed(evt);
             }
         });
+        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, 60, 30));
 
         btn_sua.setText("Sửa");
         btn_sua.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +192,7 @@ public class firmBenhNhan extends javax.swing.JPanel {
                 btn_suaActionPerformed(evt);
             }
         });
+        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 220, 60, 30));
 
         btn_luu.setText("Lưu");
         btn_luu.addActionListener(new java.awt.event.ActionListener() {
@@ -175,6 +200,7 @@ public class firmBenhNhan extends javax.swing.JPanel {
                 btn_luuActionPerformed(evt);
             }
         });
+        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 220, 60, 30));
 
         btn_huy.setText("Hủy");
         btn_huy.addActionListener(new java.awt.event.ActionListener() {
@@ -182,133 +208,7 @@ public class firmBenhNhan extends javax.swing.JPanel {
                 btn_huyActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 819, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tb_mabn, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tb_hoten, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(119, 119, 119)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel8))
-                            .addGap(27, 27, 27)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(radioButton1)
-                                    .addGap(46, 46, 46)
-                                    .addComponent(radioButton2))
-                                .addComponent(tb_sdt, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel5)
-                            .addGap(39, 39, 39)
-                            .addComponent(dtp_ngaysinh, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(119, 119, 119)
-                            .addComponent(jLabel9)
-                            .addGap(59, 59, 59)
-                            .addComponent(tb_diachi, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(643, 643, 643)
-                            .addComponent(btn_luu)
-                            .addGap(40, 40, 40)
-                            .addComponent(btn_huy))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(21, 21, 21)
-                            .addComponent(btn_load)
-                            .addGap(18, 18, 18)
-                            .addComponent(tb_search, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(6, 6, 6)
-                            .addComponent(btn_search, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(207, 207, 207)
-                            .addComponent(btn_them)
-                            .addGap(18, 18, 18)
-                            .addComponent(btn_sua)
-                            .addGap(18, 18, 18)
-                            .addComponent(btn_xoa))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel1))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 819, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 502, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel6)
-                    .addGap(30, 30, 30)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(jLabel3)
-                            .addGap(11, 11, 11)
-                            .addComponent(jLabel4))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(tb_mabn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(4, 4, 4)
-                            .addComponent(tb_hoten, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(9, 9, 9)
-                            .addComponent(jLabel7)
-                            .addGap(13, 13, 13)
-                            .addComponent(jLabel8))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(5, 5, 5)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(radioButton1)
-                                .addComponent(radioButton2))
-                            .addGap(2, 2, 2)
-                            .addComponent(tb_sdt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(jLabel5))
-                        .addComponent(dtp_ngaysinh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(12, 12, 12)
-                            .addComponent(jLabel9))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(6, 6, 6)
-                            .addComponent(tb_diachi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(30, 30, 30)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btn_luu)
-                        .addComponent(btn_huy))
-                    .addGap(11, 11, 11)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btn_load, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(5, 5, 5)
-                            .addComponent(tb_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(btn_search, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btn_them, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btn_sua, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btn_xoa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(33, 33, 33)
-                    .addComponent(jLabel1)
-                    .addGap(7, 7, 7)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, 60, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     

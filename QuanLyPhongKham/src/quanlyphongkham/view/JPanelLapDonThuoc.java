@@ -143,6 +143,7 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         table_donthuoc = new javax.swing.JTable();
 
+        setPreferredSize(new java.awt.Dimension(819, 502));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Thông Tin Chi Tiết Phiếu Khám");
@@ -186,7 +187,7 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
                 btn_themActionPerformed(evt);
             }
         });
-        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, -1, -1));
+        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
 
         btn_sua.setText("Sửa");
         btn_sua.addActionListener(new java.awt.event.ActionListener() {
@@ -194,7 +195,7 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
                 btn_suaActionPerformed(evt);
             }
         });
-        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 59, -1));
+        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 59, -1));
 
         btn_xoa.setText("Xóa");
         btn_xoa.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +203,7 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
                 btn_xoaActionPerformed(evt);
             }
         });
-        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, -1, -1));
 
         btn_luu.setText("Lưu");
         btn_luu.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +211,7 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
                 btn_luuActionPerformed(evt);
             }
         });
-        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, -1, -1));
+        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
 
         btn_huy.setText("Hủy");
         btn_huy.addActionListener(new java.awt.event.ActionListener() {
@@ -218,13 +219,13 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
                 btn_huyActionPerformed(evt);
             }
         });
-        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, -1, -1));
 
         jLabel6.setText("Tên Thuốc:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
 
         jLabel7.setText("Cách Dùng:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
 
         combobox_tenthuoc.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -238,17 +239,17 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
                 combobox_tenthuocInputMethodTextChanged(evt);
             }
         });
-        add(combobox_tenthuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 190, -1));
+        add(combobox_tenthuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 190, -1));
 
         combobox_cachdung.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 combobox_cachdungItemStateChanged(evt);
             }
         });
-        add(combobox_cachdung, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 190, -1));
+        add(combobox_cachdung, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 190, -1));
 
         jLabel8.setText("Số Lượng:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, -1, -1));
 
         txt_soluong.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
@@ -270,14 +271,14 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
                 txt_soluongVetoableChange(evt);
             }
         });
-        add(txt_soluong, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 177, -1));
+        add(txt_soluong, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 177, -1));
 
         jLabel9.setText("Giá:");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, -1, -1));
 
         txt_gia.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         txt_gia.setEnabled(false);
-        add(txt_gia, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 177, -1));
+        add(txt_gia, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 177, -1));
 
         table_donthuoc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -303,7 +304,7 @@ public class JPanelLapDonThuoc extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(table_donthuoc);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 265, 747, 254));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 265, 900, 300));
     }// </editor-fold>//GEN-END:initComponents
 
     private void combobox_mapkItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_combobox_mapkItemStateChanged

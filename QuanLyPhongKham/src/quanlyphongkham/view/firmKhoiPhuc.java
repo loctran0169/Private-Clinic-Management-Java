@@ -41,7 +41,7 @@ public class firmKhoiPhuc extends javax.swing.JPanel {
                 btn_thumucActionPerformed(evt);
             }
         });
-        add(btn_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, -1, -1));
+        add(btn_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, -1, -1));
 
         btn_khoiphuc.setText("Khôi phục");
         btn_khoiphuc.addActionListener(new java.awt.event.ActionListener() {
@@ -49,18 +49,18 @@ public class firmKhoiPhuc extends javax.swing.JPanel {
                 btn_khoiphucActionPerformed(evt);
             }
         });
-        add(btn_khoiphuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, -1, -1));
+        add(btn_khoiphuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
 
         tb_thumuc.setEnabled(false);
-        add(tb_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 210, -1));
+        add(tb_thumuc, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 210, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Khôi phục dữ liệu");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Thư mục:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     public Boolean checkData() {

@@ -32,13 +32,17 @@ public class firmDanhSachKhamBenh extends javax.swing.JPanel {
         tb_dsBenh = new javax.swing.JTable();
 
         setPreferredSize(new java.awt.Dimension(819, 502));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         date_load.setDateFormatString("dd-MM-yyyy");
+        add(date_load, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 224, 29));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setText("Danh Sách Khám Bệnh ");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
         jLabel4.setText("Ngày  khám:");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, -1, 30));
 
         btn_load.setText("Load Danh Sách");
         btn_load.addActionListener(new java.awt.event.ActionListener() {
@@ -46,6 +50,7 @@ public class firmDanhSachKhamBenh extends javax.swing.JPanel {
                 btn_loadActionPerformed(evt);
             }
         });
+        add(btn_load, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
 
         btn_in.setText("In danh sách");
         btn_in.addActionListener(new java.awt.event.ActionListener() {
@@ -53,6 +58,7 @@ public class firmDanhSachKhamBenh extends javax.swing.JPanel {
                 btn_inActionPerformed(evt);
             }
         });
+        add(btn_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 110, -1, -1));
 
         tb_dsBenh.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -67,51 +73,7 @@ public class firmDanhSachKhamBenh extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tb_dsBenh);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btn_load)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_in))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(250, 250, 250)
-                                .addComponent(jLabel3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(240, 240, 240)
-                                .addComponent(jLabel4)
-                                .addGap(0, 0, 0)
-                                .addComponent(date_load, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 224, Short.MAX_VALUE)))
-                .addGap(9, 9, 9))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel3)
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(date_load, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_load)
-                    .addComponent(btn_in))
-                .addGap(17, 17, 17)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 886, 414));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_loadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loadActionPerformed

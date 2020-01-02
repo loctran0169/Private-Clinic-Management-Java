@@ -186,13 +186,14 @@ public class JPanelNhanVien extends javax.swing.JPanel {
         radio_nam = new javax.swing.JRadioButton();
         radio_nu = new javax.swing.JRadioButton();
 
+        setPreferredSize(new java.awt.Dimension(819, 502));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Thông Tin Nhân Viên");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
 
         jLabel2.setText("Mã Nhân Viên:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 58, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
 
         txt_sdt.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         txt_sdt.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -200,37 +201,37 @@ public class JPanelNhanVien extends javax.swing.JPanel {
                 txt_sdtKeyPressed(evt);
             }
         });
-        add(txt_sdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(476, 55, 170, -1));
+        add(txt_sdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 170, -1));
 
         txt_manv.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        add(txt_manv, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 55, 170, -1));
+        add(txt_manv, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 170, -1));
 
         jLabel3.setText("Số Điện Thoại");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(392, 58, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, -1, -1));
 
         jLabel4.setText("Họ Và Tên:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 96, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
 
         txt_hoten.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        add(txt_hoten, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 93, 170, -1));
+        add(txt_hoten, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 170, -1));
 
         jLabel6.setText("Ngày Sinh:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 134, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, -1));
 
         jLabel7.setText("Địa Chỉ:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 96, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, -1, -1));
 
         txt_diachi.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        add(txt_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(476, 93, 170, -1));
+        add(txt_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 170, -1));
 
         jLabel8.setText("Chức Vụ:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 134, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, -1, -1));
 
         txt_chucvu.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        add(txt_chucvu, new org.netbeans.lib.awtextra.AbsoluteConstraints(476, 131, 170, -1));
+        add(txt_chucvu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 170, -1));
 
         jLabel9.setText("Giới Tính:");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 173, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, -1, -1));
 
         btn_xoa.setText("Xóa");
         btn_xoa.addActionListener(new java.awt.event.ActionListener() {
@@ -238,7 +239,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
                 btn_xoaActionPerformed(evt);
             }
         });
-        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, -1, 30));
+        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, -1, 30));
 
         btn_them.setText("Thêm");
         btn_them.addActionListener(new java.awt.event.ActionListener() {
@@ -246,7 +247,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
                 btn_themActionPerformed(evt);
             }
         });
-        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, 30));
+        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, -1, 30));
 
         btn_huy.setText("Hủy");
         btn_huy.addActionListener(new java.awt.event.ActionListener() {
@@ -254,7 +255,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
                 btn_huyActionPerformed(evt);
             }
         });
-        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, -1, 30));
+        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, -1, 30));
 
         jLabel10.setText("Danh Sách Nhân Viên");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
@@ -274,8 +275,8 @@ public class JPanelNhanVien extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(table_nhanvien);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 696, 210));
-        add(datePicker, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 170, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 890, 330));
+        add(datePicker, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 170, -1));
 
         btn_luu.setText("Lưu");
         btn_luu.addActionListener(new java.awt.event.ActionListener() {
@@ -283,7 +284,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
                 btn_luuActionPerformed(evt);
             }
         });
-        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, -1, 30));
+        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, -1, 30));
 
         btn_sua.setText("Sửa");
         btn_sua.addActionListener(new java.awt.event.ActionListener() {
@@ -291,7 +292,7 @@ public class JPanelNhanVien extends javax.swing.JPanel {
                 btn_suaActionPerformed(evt);
             }
         });
-        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, -1, 30));
+        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, -1, 30));
 
         radio_nam.setText("Nam");
         radio_nam.addActionListener(new java.awt.event.ActionListener() {
@@ -299,10 +300,10 @@ public class JPanelNhanVien extends javax.swing.JPanel {
                 radio_namActionPerformed(evt);
             }
         });
-        add(radio_nam, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, -1));
+        add(radio_nam, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
 
         radio_nu.setText("Nữ");
-        add(radio_nu, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
+        add(radio_nu, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
     
     private void txt_sdtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_sdtKeyPressed

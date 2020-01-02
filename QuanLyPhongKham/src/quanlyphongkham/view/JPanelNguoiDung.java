@@ -191,20 +191,21 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
         txt_tennv = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(819, 502));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setText("Mã Tài Khoản");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 48, -1, -1));
-        add(txt_taikhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 71, 153, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
+        add(txt_taikhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 153, -1));
 
         jLabel4.setText("Tài Khoản");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 74, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
 
         jLabel1.setText("Danh Sách Tài Khoản");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 205, -1, -1));
 
         jLabel5.setText("Mật Khẩu");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 100, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, -1));
 
         table_nguoidung.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -224,17 +225,17 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(table_nguoidung);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 233, 700, 267));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 233, 890, 330));
 
         jLabel6.setText("Thông Tin Tài Khoản");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 122, -1));
-        add(txt_matk, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 45, 153, -1));
+        add(txt_matk, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 153, -1));
 
         jLabel8.setText("Tên Nhân Viên");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, -1, -1));
 
         jLabel9.setText("Mã Quyền Hạn");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 101, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, -1, -1));
 
         btn_sua.setText("Sửa");
         btn_sua.addActionListener(new java.awt.event.ActionListener() {
@@ -242,7 +243,7 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
                 btn_suaActionPerformed(evt);
             }
         });
-        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 60, 30));
+        add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, 60, 30));
 
         btn_xoa.setText("Xóa");
         btn_xoa.addActionListener(new java.awt.event.ActionListener() {
@@ -250,7 +251,7 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
                 btn_xoaActionPerformed(evt);
             }
         });
-        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 60, 30));
+        add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 60, 30));
 
         btn_them.setText("Thêm");
         btn_them.addActionListener(new java.awt.event.ActionListener() {
@@ -258,15 +259,15 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
                 btn_themActionPerformed(evt);
             }
         });
-        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 70, 30));
-        add(txt_matkhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 97, 153, -1));
+        add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 70, 30));
+        add(txt_matkhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 153, -1));
 
         combobox_manv.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 combobox_manvItemStateChanged(evt);
             }
         });
-        add(combobox_manv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 153, -1));
+        add(combobox_manv, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 153, -1));
 
         btn_luu.setText("Lưu");
         btn_luu.addActionListener(new java.awt.event.ActionListener() {
@@ -274,7 +275,7 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
                 btn_luuActionPerformed(evt);
             }
         });
-        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 60, 30));
+        add(btn_luu, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, 60, 30));
 
         btn_huy.setText("Hủy");
         btn_huy.addActionListener(new java.awt.event.ActionListener() {
@@ -282,20 +283,20 @@ public class JPanelNguoiDung extends javax.swing.JPanel {
                 btn_huyActionPerformed(evt);
             }
         });
-        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 150, 60, 30));
+        add(btn_huy, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 60, 30));
 
         combobox_maqh.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 combobox_maqhItemStateChanged(evt);
             }
         });
-        add(combobox_maqh, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 153, -1));
+        add(combobox_maqh, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, 153, -1));
 
         txt_tennv.setEnabled(false);
-        add(txt_tennv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 153, -1));
+        add(txt_tennv, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 153, -1));
 
         jLabel10.setText("Mã Nhân Viên");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, -1, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void table_nguoidungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_nguoidungMouseClicked
