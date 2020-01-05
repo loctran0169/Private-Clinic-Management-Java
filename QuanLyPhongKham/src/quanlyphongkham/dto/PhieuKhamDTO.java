@@ -61,4 +61,22 @@ public class PhieuKhamDTO {
     private String MaLB;
     private Date NgayKham;
     private Date NgayKhamLai;
+
+    public String getChuanDooan() {
+        return ChuanDooan;
+    }
+
+    public void setChuanDooan(String ChuanDooan) {
+        this.ChuanDooan = ChuanDooan;
+    }
+
+    public String getChiDinh() {
+        return ChiDinh;
+    }
+
+    public void setChiDinh(String ChiDinh) {
+        this.ChiDinh = ChiDinh;
+    }
+    private String ChuanDooan;
+    private String ChiDinh;
 }
