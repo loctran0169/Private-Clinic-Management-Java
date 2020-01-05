@@ -53,7 +53,7 @@ public class HoaDonDAL extends ConnectDB {
             pst.setInt(5, hd.getTongTien());
             pst.executeUpdate();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage()+"sad");
             return false;
         }
         return true;
@@ -164,6 +164,29 @@ public class HoaDonDAL extends ConnectDB {
         return rs;
     }
     
+    public ResultSet BaoCaoDoanhThuNgay(Date a,Date b) {
+        try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String query = "";
+            query += " SELECT NgayLap as 'Ngày lập',COUNT(*) as   'Số lượng bệnh nhân', sum(tongtien) as 'Doanh thu (VNĐ)',sum(tongtien)*100/(SELECT sum(tongtien)";
+            query += " FROM HOADON where date(HOADON.NgayLap)>=date(?) and date(HOADON.NgayLap)<=date(?)) as 'Tỷ lệ(%)' FROM HOADON ";
+            query += " where date(HOADON.NgayLap)>=date(?) and date(HOADON.NgayLap)<=date(?) ";
+            query += " group by NgayLap";
+            pst = conn.prepareStatement(query);
+            pst.setDate(1, convertUtilToSql(a));
+            pst.setDate(2, convertUtilToSql(b));
+            pst.setDate(3, convertUtilToSql(a));
+            pst.setDate(4, convertUtilToSql(b));
+            rs = pst.executeQuery();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+            return null;
+        }
+        return rs;
+    }
+    
     public ResultSet BaoCaoSuDungThuocThang(Date date) {
         try {
             if (conn == null || conn.isClosed()) {
@@ -177,6 +200,27 @@ public class HoaDonDAL extends ConnectDB {
             pst = conn.prepareStatement(query);
             pst.setDate(1, convertUtilToSql(date));
             pst.setDate(2, convertUtilToSql(date));
+            rs = pst.executeQuery();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+            return null;
+        }
+        return rs;
+    }
+    
+    public ResultSet BaoCaoSuDungThuocNgay(Date a,Date b) {
+        try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String query = "";
+            query += " SELECT TenThuoc as 'Tên thuốc',dv.TenDonVi as 'Tên đơn vị' ,sum(SoLuong) as   'Số lượng', count(TenThuoc) as 'Số lần dùng' ";
+            query += " FROM DONTHUOC dt, HOADON hd, THUOC t,DONVITINH dv ";
+            query += " where date(hd.ngaylap) >= date(?) and date(hd.ngaylap)<=date(?) and hd.MaPK=dt.MaPK and t.MaThuoc=dt.MaThuoc and dv.MaDV=t.MaDV ";
+            query += " group by t.MaThuoc";
+            pst = conn.prepareStatement(query);
+            pst.setDate(1, convertUtilToSql(a));
+            pst.setDate(2, convertUtilToSql(b));
             rs = pst.executeQuery();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
