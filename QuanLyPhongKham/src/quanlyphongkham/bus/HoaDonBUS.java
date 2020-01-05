@@ -40,7 +40,16 @@ public class HoaDonBUS {
     public ResultSet BaoCaoDoanhThuThang(Date s) {
         return dal.BaoCaoDoanhThuThang(s);
     }
+    
+    public ResultSet BaoCaoDoanhThuNgay(Date a,Date b) {
+        return dal.BaoCaoDoanhThuNgay(a,b);
+    }
+    
     public ResultSet BaoCaoSuDungThuocThang(Date s) {
         return dal.BaoCaoSuDungThuocThang(s);
+    }
+    
+    public ResultSet BaoCaoSuDungThuocNgay(Date a,Date b) {
+        return dal.BaoCaoSuDungThuocNgay(a,b);
     }
 }
