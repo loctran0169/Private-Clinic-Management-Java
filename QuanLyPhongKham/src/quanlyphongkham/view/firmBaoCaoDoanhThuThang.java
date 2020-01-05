@@ -107,7 +107,7 @@ public class firmBaoCaoDoanhThuThang extends javax.swing.JPanel {
 
     private void btn_inbaocaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inbaocaoActionPerformed
         if (tb_baocao.getModel() == null || tb_baocao.getRowCount() == 0) {
-            JOptionPane.showMessageDialog(null, "Chưa có thông tin trong ngày này");
+            JOptionPane.showMessageDialog(null, "Chưa có thông tin");
             return;
         } else {
             DateFormat dateFormat = new SimpleDateFormat("MM-yyyy");
