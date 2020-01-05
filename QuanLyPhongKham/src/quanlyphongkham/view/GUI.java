@@ -112,6 +112,9 @@ public class GUI extends javax.swing.JFrame {
         
         panelThongTin.setLayout(new BorderLayout());
         panelThongTin.add(new JPanelThongTinTaiKhoan(us));
+        
+        panelLichSuBenhNhan.setLayout(new BorderLayout());
+        panelLichSuBenhNhan.add(new firmLichSuBNDS());
     }
 
     @SuppressWarnings("unchecked")
@@ -135,6 +138,7 @@ public class GUI extends javax.swing.JFrame {
         panelLapPhieuKham = new javax.swing.JPanel();
         panelLapDonThuoc = new javax.swing.JPanel();
         panelHoaDon = new javax.swing.JPanel();
+        panelLichSuBenhNhan = new javax.swing.JPanel();
         panelDanhMuc = new javax.swing.JTabbedPane();
         panelThamSo = new javax.swing.JPanel();
         panelThuoc = new javax.swing.JPanel();
@@ -265,7 +269,7 @@ public class GUI extends javax.swing.JFrame {
         );
         panelNhanVienLayout.setVerticalGroup(
             panelNhanVienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 523, Short.MAX_VALUE)
         );
 
         panelQuanLy.addTab("Nhân viên", new javax.swing.ImageIcon(getClass().getResource("/image/quản lí nhân viên phòng khám.png")), panelNhanVien); // NOI18N
@@ -278,7 +282,7 @@ public class GUI extends javax.swing.JFrame {
         );
         panelBNLayout.setVerticalGroup(
             panelBNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 523, Short.MAX_VALUE)
         );
 
         panelQuanLy.addTab("Bệnh nhân", new javax.swing.ImageIcon(getClass().getResource("/image/quản lí bệnh nhân.png")), panelBN); // NOI18N
@@ -291,7 +295,7 @@ public class GUI extends javax.swing.JFrame {
         );
         panelDanhSachKhamBenhLayout.setVerticalGroup(
             panelDanhSachKhamBenhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 523, Short.MAX_VALUE)
         );
 
         panelQuanLy.addTab("Danh sách khám bệnh", new javax.swing.ImageIcon(getClass().getResource("/image/danh sách khám bệnh.png")), panelDanhSachKhamBenh); // NOI18N
@@ -304,7 +308,7 @@ public class GUI extends javax.swing.JFrame {
         );
         panelDanhSachChoLayout.setVerticalGroup(
             panelDanhSachChoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 523, Short.MAX_VALUE)
         );
 
         panelQuanLy.addTab("Danh sách chờ", new javax.swing.ImageIcon(getClass().getResource("/image/danh sách khám bệnh.png")), panelDanhSachCho); // NOI18N
@@ -317,7 +321,7 @@ public class GUI extends javax.swing.JFrame {
         );
         panelLapPhieuKhamLayout.setVerticalGroup(
             panelLapPhieuKhamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 523, Short.MAX_VALUE)
         );
 
         panelQuanLy.addTab("Lập phiếu khám bệnh", new javax.swing.ImageIcon(getClass().getResource("/image/phiếu khám.png")), panelLapPhieuKham); // NOI18N
@@ -330,7 +334,7 @@ public class GUI extends javax.swing.JFrame {
         );
         panelLapDonThuocLayout.setVerticalGroup(
             panelLapDonThuocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 523, Short.MAX_VALUE)
         );
 
         panelQuanLy.addTab("Lập đơn thốc", new javax.swing.ImageIcon(getClass().getResource("/image/lập đơn thuốc.png")), panelLapDonThuoc); // NOI18N
@@ -343,10 +347,23 @@ public class GUI extends javax.swing.JFrame {
         );
         panelHoaDonLayout.setVerticalGroup(
             panelHoaDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGap(0, 523, Short.MAX_VALUE)
         );
 
         panelQuanLy.addTab("Lập hóa đơn", new javax.swing.ImageIcon(getClass().getResource("/image/hóa đơn.png")), panelHoaDon); // NOI18N
+
+        javax.swing.GroupLayout panelLichSuBenhNhanLayout = new javax.swing.GroupLayout(panelLichSuBenhNhan);
+        panelLichSuBenhNhan.setLayout(panelLichSuBenhNhanLayout);
+        panelLichSuBenhNhanLayout.setHorizontalGroup(
+            panelLichSuBenhNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 906, Short.MAX_VALUE)
+        );
+        panelLichSuBenhNhanLayout.setVerticalGroup(
+            panelLichSuBenhNhanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 523, Short.MAX_VALUE)
+        );
+
+        panelQuanLy.addTab("Lịch sử BN", new javax.swing.ImageIcon(getClass().getResource("/image/lịch làm việc.png")), panelLichSuBenhNhan); // NOI18N
 
         panelMain.addTab("Quản lý", new javax.swing.ImageIcon(getClass().getResource("/image/quản li.png")), panelQuanLy); // NOI18N
 
@@ -576,6 +593,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel panelKhoiPhuc;
     private javax.swing.JPanel panelLapDonThuoc;
     private javax.swing.JPanel panelLapPhieuKham;
+    private javax.swing.JPanel panelLichSuBenhNhan;
     private javax.swing.JPanel panelLichSuDangNhap;
     private javax.swing.JPanel panelLoaiBenh;
     private javax.swing.JTabbedPane panelMain;
