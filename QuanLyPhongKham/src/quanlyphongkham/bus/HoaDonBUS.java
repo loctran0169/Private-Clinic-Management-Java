@@ -18,6 +18,11 @@ public class HoaDonBUS {
         return dal.loadToDataTable();
     }
 
+    
+    public ResultSet loadTD() {
+        return dal.loadTD();
+    }
+    
     public Boolean them(HoaDonDTO hd) {
         return dal.them(hd);
     }

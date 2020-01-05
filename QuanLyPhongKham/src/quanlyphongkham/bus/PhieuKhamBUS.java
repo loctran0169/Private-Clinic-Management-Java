@@ -28,7 +28,11 @@ public class PhieuKhamBUS {
     public ResultSet loadToDataTable() {
         return dal.loadToDataTable();
     }
-
+    
+    public PhieuKhamDTO loadToDataTable(String MaPK) {
+        return dal.loadOnePK(MaPK);
+    }
+    
     public ResultSet selectByKeyWord(String key) {
         return dal.selectByKeyWord(key);
     }
