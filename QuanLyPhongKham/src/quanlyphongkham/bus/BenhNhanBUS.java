@@ -41,4 +41,7 @@ public class BenhNhanBUS {
     public ResultSet loadDanhSachKhamBenh(Date dt) {
         return dal.loadDanhSachKhamBenh(dt);
     }
+    public ResultSet loadLichSuBenhNhan(String mabn){
+        return dal.loadLichSuBenhNhan(mabn);
+    }
 }

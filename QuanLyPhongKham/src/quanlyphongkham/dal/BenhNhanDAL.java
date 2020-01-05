@@ -139,7 +139,26 @@ public class BenhNhanDAL extends ConnectDB {
         }
         return rs;
     }
-
+    public ResultSet loadLichSuBenhNhan(String mabn)
+    {
+        try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String sql = "select hd.MaHD as 'Mã Hóa Đơn',pk.mapk as 'Mã Phiếu Khám', NgayKham as 'Ngày khám', TienThuoc as 'Tiền thuốc', \n"
+                    + "TongTien as 'Tổng tiền', TenLoaiBenh as 'Tên loại bệnh', TrieuChung as 'Triệu chứng'\n"
+                    + "from hoadon hd, phieukham pk, benh b \n"
+                    + "where hd.MaPK = pk.MaPK and pk.MaLB = b.MaLB and MaBN = ?";
+            
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, mabn);
+            rs = pst.executeQuery();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
+            return null;
+        }
+        return rs;
+    }
     private static java.sql.Date convertUtilToSql(java.util.Date uDate) {
         java.sql.Date sDate = new java.sql.Date(uDate.getTime());
         return sDate;

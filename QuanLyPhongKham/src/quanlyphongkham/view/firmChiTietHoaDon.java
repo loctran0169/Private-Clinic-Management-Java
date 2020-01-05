@@ -16,7 +16,8 @@ import quanlyphongkham.bus.HoaDonBUS;
  */
 public class firmChiTietHoaDon extends javax.swing.JFrame {
     private  String mapk;
-    private JTable dt;
+    private String mahd;
+    private JTable dt=new JTable();
     HoaDonBUS bus = new HoaDonBUS();
     
     /**
@@ -28,41 +29,38 @@ public class firmChiTietHoaDon extends javax.swing.JFrame {
     }
     
 
-    public firmChiTietHoaDon(String toString) {
+    public firmChiTietHoaDon(String mapk,String mahd) {
         initComponents();
-        this.mapk=toString;
+        this.mapk=mapk;
+        this.mahd=mahd;
         ReloadDb();
         
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     public void ReloadDb() {
-        JOptionPane.showMessageDialog(null, "kdsagdysad "+mapk);
+        
+      
+        
+        
         try {
             dt.setModel(DbUtils.resultSetToTableModel(bus.LoadTienThuoc(mapk)));
             tbCTHD.setModel(DbUtils.resultSetToTableModel(bus.loadDuLieu(mapk)));
             if (dt.getRowCount() == 0) {
                 JOptionPane.showMessageDialog(null, "Không có thông tin phiếu khám");
                 txtHoTen.setText("");
-                txtMaHoaDon.setText("");
+                txtMaPhieuKham.setText("");
                 txtMaPhieuKham.setText("");
 
                 txtTienThuoc.setText("");
                 txtTongTien.setText("");
-              
+                //checkBox1.setSelected(false);
                 return;
             }
+            txtMaPhieuKham.setText(mapk);
+            txtMaHoaDon.setText(mahd);
             txtHoTen.setText(dt.getValueAt(0, 0).toString());
             txtTienThuoc.setText(dt.getValueAt(0, 1).toString());
-
-            String hd = bus.TimHoaDon(mapk);
-
-            if (hd == null || hd.isEmpty()) {
-               // checkBox1.setSelected(false);
-                txtMaHoaDon.setText(null);
-            } else {
-                txtMaHoaDon.setText(hd);
-             //   checkBox1.setSelected(true);
-            }
+            txtTienKham.setText("30000");
             int sum = Integer.parseInt(txtTienThuoc.getText()) + Integer.parseInt(txtTienKham.getText());
             txtTongTien.setText(Integer.toString(sum));
         } catch (Exception ex) {
@@ -208,6 +206,7 @@ public class firmChiTietHoaDon extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
