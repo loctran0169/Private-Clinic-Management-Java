@@ -39,6 +39,22 @@ public class HoaDonDAL extends ConnectDB {
         return rs;
     }
 
+    public ResultSet loadTD() {
+        try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String sql = "SELECT mahd "
+                    + " FROM hoadon";
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+            return null;
+        }
+        return rs;
+    }
+    
     public Boolean them(HoaDonDTO hd) {
         try {
             if (conn == null || conn.isClosed()) {
@@ -53,7 +69,7 @@ public class HoaDonDAL extends ConnectDB {
             pst.setInt(5, hd.getTongTien());
             pst.executeUpdate();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage()+"sad");
+            JOptionPane.showMessageDialog(null, e.getMessage());
             return false;
         }
         return true;

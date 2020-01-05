@@ -47,15 +47,12 @@ public class PhieuKhamDAL extends ConnectDB{
             if (conn == null || conn.isClosed()) {
                 open();
             }
-            String sql = "UPDATE phieukham SET mabn = ?, manv = ?, malb = ?,ngaykham = ? "
+            String sql = "UPDATE phieukham SET chuandoan=?, chidinh=? "
                     + " WHERE mapk = ?";
             pst = conn.prepareStatement(sql);
-
-            pst.setString(1, hd.getMaBN());
-            pst.setString(2, hd.getMaNV());
-            pst.setString(3, hd.getMaLB());            
-            pst.setDate(4, convertUtilToSql(hd.getNgayKham()));
-            pst.setString(5, hd.getMaPK());
+            pst.setString(1, hd.getChuanDooan());
+            pst.setString(2, hd.getChiDinh());
+            pst.setString(3, hd.getMaPK());
 
             pst.executeUpdate();
         } catch (Exception e) {
@@ -94,6 +91,27 @@ public class PhieuKhamDAL extends ConnectDB{
             return null;
         }
         return rs;
+    }
+    
+    public PhieuKhamDTO loadOnePK(String MaPK) {
+        PhieuKhamDTO dto = new PhieuKhamDTO();
+        try {
+            if (conn == null || conn.isClosed()) {
+                open();
+            }
+            String sql = "SELECT * FROM PHIEUKHAM where mapk =?";
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, MaPK);
+            rs = pst.executeQuery();
+            while(rs.next()){
+                dto.setChuanDooan(rs.getString("ChuanDoan"));
+                dto.setChiDinh(rs.getString("ChiDinh"));
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+            return dto;
+        }
+        return dto;
     }
     
     public ResultSet selectByKeyWord(String key) {
