@@ -68,7 +68,7 @@ public class firmHoaDon extends javax.swing.JPanel {
                 bt_xemActionPerformed(evt);
             }
         });
-        add(bt_xem, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, 95, 30));
+        add(bt_xem, new org.netbeans.lib.awtextra.AbsoluteConstraints(505, 180, 130, 30));
 
         jLabel4.setText("Mã Phiếu Khám:");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
@@ -114,7 +114,7 @@ public class firmHoaDon extends javax.swing.JPanel {
 
         checkBox1.setText("Thanh Toán");
         checkBox1.setEnabled(false);
-        add(checkBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, -1, -1));
+        add(checkBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, -1));
 
         tb_tienthuoc.setEnabled(false);
         add(tb_tienthuoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 90, 170, -1));
@@ -154,19 +154,20 @@ public class firmHoaDon extends javax.swing.JPanel {
             return;
         } else {
             int dialogButton = JOptionPane.YES_NO_OPTION;
-            int dialogResult = JOptionPane.showConfirmDialog(null, "Bạn muốn xóa bệnh nhân??", "Thông báo", dialogButton);
+            int dialogResult = JOptionPane.showConfirmDialog(null, "Lập hóa đơn", "Thông báo", dialogButton);
             if (dialogResult == JOptionPane.YES_OPTION) {
                 try {
                     HoaDonDTO hd = new HoaDonDTO();
                     hd.setMaHD(TaoMaTuDong("HD"));
                     hd.setMaPK(tb_pk.getText());
+                    
                     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                     LocalDateTime now = LocalDateTime.now();
                     Date dateNgapLap = new SimpleDateFormat("yyyy-MM-dd").parse(dtf.format(now));
                     hd.setNgayLap(dateNgapLap);
                     hd.setTienThuoc(Integer.parseInt(tb_tienthuoc.getText()));
                     hd.setTongTien(Integer.parseInt(tb_tongtien.getText()));
-
+                    
                     tb_mahd.setText(hd.getMaHD());
                     Boolean kq = bus.them(hd);
                     if (kq == true) {
@@ -184,7 +185,7 @@ public class firmHoaDon extends javax.swing.JPanel {
 
     private String TaoMaTuDong(String key) {
         JTable dt = new JTable();
-        dt.setModel(DbUtils.resultSetToTableModel(bus.loadToDataTable()));
+        dt.setModel(DbUtils.resultSetToTableModel(bus.loadTD()));
 
         int coso = 0;
         if (dt.getRowCount() == 0) {
@@ -236,7 +237,7 @@ public class firmHoaDon extends javax.swing.JPanel {
             }
             tb_hoten.setText(dt.getValueAt(0, 0).toString());
             tb_tienthuoc.setText(dt.getValueAt(0, 1).toString());
-
+            
             String hd = bus.TimHoaDon(tb_pk.getText());
 
             if (hd == null || hd.isEmpty()) {
