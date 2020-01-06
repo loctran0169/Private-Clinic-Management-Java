@@ -1,0 +1,2 @@
+﻿Sử dụng Mysql, chạy query file qlpk.sql.
+Sử dụng netbeans, hết rối netbeans với mysql
